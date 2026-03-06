@@ -1,49 +1,44 @@
 ﻿using System;
+using System.IO;
+using System.Text.Json;
 
 class Program
 {
+    static List<Post> posts = new List<Post>();
+    const string fileName = "posts.json";
     // Точка входа в программу
     static void Main()
     {
-        // Флаг, управляющий работой главного цикла программы
-        // Пока isRunning == true, меню будет показываться снова и снова
         bool isRunning = true;
+        LoadPostsFromFile();
 
-        // Главный цикл программы (while)
-        // Он будет выполняться до тех пор, пока isRunning не станет false
         while (isRunning)
         {
-            // Очищаем экран консоли, чтобы меню выглядело аккуратно
             Console.Clear();
-
-            // Выводим пункты меню
             Console.WriteLine("=== Меню блога ===\n");
             Console.WriteLine("1. Создать новый пост");
-            Console.WriteLine("2. Выйти");
+            Console.WriteLine("2. Показать все посты");
+            Console.WriteLine("3. Выйти");
             Console.Write("\nВыберите пункт: ");
 
-            // Считываем выбор пользователя (это будет строка: "1" или "2")
             string choice = Console.ReadLine();
 
-            // Оператор switch проверяет значение переменной choice
-            // и выполняет соответствующий блок кода
             switch (choice)
             {
-                // Если пользователь ввёл "1" — вызываем метод CreatePost()
                 case "1":
-                    CreatePost();  // Вызов метода для создания поста
-                    break;         // break обязателен, чтобы выйти из switch
-
-                // Если пользователь ввёл "2" — завершаем программу
+                    CreatePost();
+                    break;
                 case "2":
-                    isRunning = false;  // Меняем флаг, чтобы выйти из while
+                    ShowAllPosts();
+                    break;
+                case "3":
+                    isRunning = false;
+                    SavePostsToFile();
                     Console.WriteLine("Выход из программы...");
                     break;
-
-                // Если пользователь ввёл что-то другое — сообщаем об ошибке
                 default:
-                    Console.WriteLine("Неверный пункт. Нажмите любую клавишу, чтобы продолжить...");
-                    Console.ReadKey();  // Ждём нажатия любой клавиши
+                    Console.WriteLine("Неверный пункт. Нажмите любую клавишу...");
+                    Console.ReadKey();
                     break;
             }
         }
@@ -51,45 +46,87 @@ class Program
 
     // Метод для создания нового поста
     // Выносим код в отдельный метод, чтобы не загромождать Main()
-    static void CreatePost()
-    {
-        // Очищаем экран перед созданием поста
-        Console.Clear();
-        Console.WriteLine("=== Создание нового поста ===\n");
-
-        // Ввод названия поста
-        Console.Write("Введите название поста: ");
-        string title = Console.ReadLine();
-
-        // Проверяем длину названия
-        if (title.Length < 3)
+    
+        static void CreatePost()
         {
-            Console.WriteLine("Ошибка: название должно быть не короче 3 символов.");
-        }
-        else
-        {
-            // Ввод содержания поста
-            Console.Write("Введите содержание поста: ");
-            string content = Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("=== Создание нового поста ===\n");
 
-            // Проверяем, что содержание не пустое
-            if (content.Length == 0)
+            Console.Write("Введите название поста: ");
+            string title = Console.ReadLine();
+
+            if (title.Length < 3)
             {
-                Console.WriteLine("Ошибка: содержание не может быть пустым.");
+                Console.WriteLine("Ошибка: название должно быть не короче 3 символов.");
             }
             else
             {
-                // Вычисляем длину содержания
-                int contentLength = content.Length;
+                Console.Write("Введите содержание поста: ");
+                string content = Console.ReadLine();
 
-                // Выводим результат
-                Console.WriteLine($"\nПост '{title}' готов к публикации.");
-                Console.WriteLine($"Длина содержания: {contentLength} символов.");
+                if (content.Length == 0)
+                {
+                    Console.WriteLine("Ошибка: содержание не может быть пустым.");
+                }
+                else
+                {
+                    posts.Add(new Post { Title = title, Content = content, CreatedAt = DateTime.Now });
+                    Console.WriteLine($"\nПост '{title}' добавлен.");
+                }
+            }
+
+            Console.WriteLine("\nНажмите любую клавишу...");
+            Console.ReadKey();
+        }
+        static void ShowAllPosts()
+    {
+        Console.Clear();
+        Console.WriteLine("=== Все посты ===\n");
+
+        if (posts.Count == 0)
+        {
+            Console.WriteLine("Постов пока нет.");
+        }
+        else
+        {
+            foreach (var post in posts)
+            {
+                Console.WriteLine($"ID: {post.Id}");
+                Console.WriteLine($"Название: {post.Title}");
+                Console.WriteLine($"Содержание: {post.Content}");
+                Console.WriteLine($"Создан: {post.CreatedAt}");
+                Console.WriteLine("----------");
             }
         }
 
-        // Пауза, чтобы пользователь увидел результат, а затем вернуться в меню
-        Console.WriteLine("\nНажмите любую клавишу, чтобы вернуться в меню...");
+        Console.WriteLine("\nНажмите любую клавишу...");
         Console.ReadKey();
+    }
+    static void SavePostsToFile()
+    {
+        string json = JsonSerializer.Serialize(posts, new JsonSerializerOptions { WriteIndented = true });
+        File.WriteAllText(fileName, json);
+    }
+
+    static void LoadPostsFromFile()
+    {
+        if (File.Exists(fileName))
+        {
+            string json = File.ReadAllText(fileName);
+            posts = JsonSerializer.Deserialize<List<Post>>(json) ?? new List<Post>();
+        }
+    }
+}
+class Post
+{
+    private static int nextId = 1; // статическое поле для генерации уникальных ID
+    public int Id { get; set; }
+    public string Title { get; set; }
+    public string Content { get; set; }
+    public DateTime CreatedAt { get; set; }
+
+    public Post()
+    {
+        Id = nextId++;
     }
 }

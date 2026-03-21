@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Сергей | Инженер-разработчик C# / .NET | Карьерные возможности</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f7f9fc;
+            color: #1e293b;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .profile-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 2rem 2rem 1.5rem 2rem;
+            color: white;
+        }
+
+        .name {
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #cbd5e1;
+            margin-bottom: 1rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(4px);
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+            margin-bottom: 1.25rem;
+            color: #0f172a;
+        }
+
+        .education-card {
+            background: #f8fafc;
+            border-radius: 1rem;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .education-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .education-desc {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            padding: 1.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .project-card:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 8px 20px -12px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+
+        .project-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        .project-stack {
+            font-size: 0.8rem;
+            color: #3b82f6;
+            background: #eff6ff;
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-desc {
+            color: #334155;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            font-size: 0.85rem;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.5rem;
+        }
+
+        .skill-tag {
+            background: #eef2ff;
+            color: #1e40af;
+            padding: 0.3rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .career-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .career-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 1.25rem;
+            transition: all 0.2s;
+        }
+
+        .career-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #0f172a;
+        }
+
+        .career-tag {
+            background: #f1f5f9;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #2563eb;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+        }
+
+        .career-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .career-list li {
+            margin-bottom: 0.6rem;
+            font-size: 0.9rem;
+            color: #334155;
+            display: flex;
+            gap: 0.5rem;
+            align-items: baseline;
+        }
+
+        .career-list li::before {
+            content: "▹";
+            color: #3b82f6;
+        }
+
+        .contact-area {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: space-between;
+            background: #f1f5f9;
+            border-radius: 1rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .linkedin-btn {
+            background: #0a66c2;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background 0.2s;
+        }
+
+        .linkedin-btn:hover {
+            background: #004182;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 1.5rem 0;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="profile-header">
+        <div class="name">Сергей</div>
+        <div class="title">C# / .NET разработчик | Инженер-системотехник</div>
+        <div class="badge">📍 Беларусь · Открыт к удалённой работе и релокации</div>
+    </div>
+    
+    <div class="content">
+        <!-- Образование и мышление -->
+        <div class="section">
+            <div class="section-title">Образование и подход</div>
+            <div class="education-card">
+                <div class="education-title">🎓 Инженер (диплом)</div>
+                <div class="education-desc">Высшее инженерное образование — фундамент системного мышления, структурного анализа и решения сложных задач. Инженерная дисциплина перенесена в разработку ПО: от проектирования архитектуры до отладки высоконагруженных систем.</div>
+            </div>
+        </div>
+
+        <!-- Проекты -->
+        <div class="section">
+            <div class="section-title">Проекты</div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-name">BlogConsole</div>
+                    <div class="project-stack">C# · .NET 8 · Git · JSON · Repository pattern</div>
+                    <div class="project-desc">Консольное приложение для управления постами блога с полным CRUD, сохранением в JSON и чистой архитектурой (интерфейсы, репозиторий). Реализована валидация, работа с файлами, LINQ, отказоустойчивость.</div>
+                    <a href="#" class="project-link">🔗 GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-name">Stacked (Web API)</div>
+                    <div class="project-stack">ASP.NET Core · Clean Architecture · CQRS · EF Core · Swagger</div>
+                    <div class="project-desc">Полноценное веб-API для блог-платформы, построенное на принципах Clean Architecture. Слои: Domain, Application, Infrastructure, Web. Использован CQRS (MediatR), валидация FluentValidation, взаимодействие с PostgreSQL.</div>
+                    <a href="#" class="project-link">🚀 Демо API →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-name">Telegram‑бот (AI assistant)</div>
+                    <div class="project-stack">C# · Telegram.Bot · AI (Semantic Kernel) · Docker</div>
+                    <div class="project-desc">Ассистент для работы с блогом: создание/просмотр постов через Telegram, интеграция с AI-моделями (поддержка локального инференса). Демонстрирует навыки интеграции с внешними API и гибридных AI-сценариев.</div>
+                    <a href="#" class="project-link">🤖 Бот в Telegram →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Технический стек -->
+        <div class="section">
+            <div class="section-title">Технический стек</div>
+            <div class="skills-list">
+                <span class="skill-tag">C# / .NET 8/9</span>
+                <span class="skill-tag">ASP.NET Core Web API</span>
+                <span class="skill-tag">Entity Framework Core</span>
+                <span class="skill-tag">SQL (PostgreSQL, SQLite)</span>
+                <span class="skill-tag">REST API · Swagger</span>
+                <span class="skill-tag">Git · GitHub Actions (CI/CD)</span>
+                <span class="skill-tag">Docker (контейнеризация)</span>
+                <span class="skill-tag">Clean Architecture · CQRS</span>
+                <span class="skill-tag">MediatR · FluentValidation</span>
+                <span class="skill-tag">TypeScript / React (основы)</span>
+                <span class="skill-tag">Telegram Bot API</span>
+                <span class="skill-tag">Английский (Intermediate+)</span>
+                <span class="skill-tag">Системное мышление / архитектура ПО</span>
+            </div>
+        </div>
+
+        <!-- 🔥 НОВЫЙ БЛОК: КАРЬЕРА И ВОЗМОЖНОСТИ -->
+        <div class="section">
+            <div class="section-title">Где и как работать уже сейчас</div>
+            <div class="career-grid">
+                <div class="career-card">
+                    <h3>🖥️ Фриланс / Аутстафф (C# & .NET)</h3>
+                    <div class="career-tag">старт через 2–3 недели</div>
+                    <ul class="career-list">
+                        <li>Upwork, Fiverr, Freelancer — первые заказы на консольные утилиты, парсинг, работу с JSON/API, мелкие проекты на ASP.NET Core.</li>
+                        <li>Telegram‑каналы: «C# фриланс», «.NET заказы», «IT‑фриланс Беларусь» – быстрые задачи без комиссии.</li>
+                        <li>Аутстафф через белорусские компании: EPAM (Junior Lab), IBA, Itransition, Andersen (стажировки и junior программы).</li>
+                    </ul>
+                </div>
+                <div class="career-card">
+                    <h3>🏢 Официальное трудоустройство</h3>
+                    <div class="career-tag">junior / trainee стажировки</div>
+                    <ul class="career-list">
+                        <li>Платформы: hh.by, rabota.by, LinkedIn (фильтр «Беларусь» + «удалённо»).</li>
+                        <li>Госсектор (Белорусские госструктуры, «ГИВЦ», «Белтехэкспорт») – требуют инженерное образование, что у тебя есть, ценят системность.</li>
+                        <li>Частные компании (Wargaming, Intetics, Andersen Lab, Oxagile) – junior .NET позиции с возможностью полной удалёнки.</li>
+                    </ul>
+                </div>
+                <div class="career-card">
+                    <h3>⚖️ Самозанятость / ИП</h3>
+                    <div class="career-tag">налог на проф. доход (НПД)</div>
+                    <ul class="career-list">
+                        <li>Официальный статус самозанятого в Беларуси (приложение «Налог на профессиональный доход»). Позволяет работать с зарубежными заказчиками (B2B) и выставлять счета, налог 10%.</li>
+                        <li>Регистрация ИП (упрощённая система) — подходит для крупных контрактов и работы с компаниями РФ/ЕС.</li>
+                        <li>Уже сейчас можно заключать договоры на мелкие доработки (исправление багов, написание тестов, настройка CI/CD).</li>
+                    </ul>
+                </div>
+                <div class="career-card">
+                    <h3>🌍 Международная удалёнка</h3>
+                    <div class="career-tag">remote .NET / C# junior+</div>
+                    <ul class="career-list">
+                        <li>Платформы: We Work Remotely, RemoteOK, Turing, Arc.dev – фильтр «.NET», «C#». Требуют английский B1+ (у тебя Intermediate).</li>
+                        <li>Студенческая / junior программы в GitHub Education (Copilot), Microsoft Learn (сертификаты) повышают шансы на международные стажировки.</li>
+                        <li>Проекты open source (Clean Architecture Template, ASP.NET Core) — участие в issues даёт строчку в резюме и упрощает вход в зарубежные стартапы.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Практический план: что можно делать прямо сейчас -->
+        <div class="section">
+            <div class="section-title">🚀 Стартовая дорожная карта (ближайшие 1–2 месяца)</div>
+            <div class="education-card" style="background:#fef9e3; border-left:4px solid #eab308;">
+                <div class="education-title">📌 Реальные шаги для первых заказов</div>
+                <ul style="margin-top: 0.75rem; margin-left: 1.25rem; color: #334155;">
+                    <li><strong>Завершить портфолио:</strong> выложить BlogConsole, Stacked и Telegram‑бота на GitHub с README (уже есть).</li>
+                    <li><strong>Аккаунты на биржах:</strong> зарегистрироваться на Upwork, Fiverr, подготовить краткое портфолио с описанием проектов.</li>
+                    <li><strong>Собрать первые фриланс‑задачи:</strong> написать парсер данных, консольный инструмент для обработки логов, простой Web API для todo‑листа или калькулятора.</li>
+                    <li><strong>Параллельно откликаться:</strong> на hh.by (стажировки «.NET Developer Trainee»), отправлять CV с акцентом на инженерный диплом + проекты.</li>
+                    <li><strong>Использовать LinkedIn:</strong> оформить профиль как в этом HTML, подключить английскую версию, добавить открытые проекты и контакты.</li>
+                </ul>
+                <div class="education-title" style="margin-top: 1rem;">💰 Ожидаемые доходы на старте</div>
+                <ul style="margin-left: 1.25rem; color: #334155;">
+                    <li>Мелкие фриланс-задачи: $50–300 за проект (2–3 задачи в месяц).</li>
+                    <li>Стажировка/part‑time в компании: $300–700/мес.</li>
+                    <li>Удалённые заказы через биржи: $10–25/час при занятости 10–20 часов в неделю.</li>
+                </ul>
+                <div class="education-title" style="margin-top: 1rem;">📋 Легальные формы</div>
+                <ul style="margin-left: 1.25rem; color: #334155;">
+                    <li><strong>Самозанятость (НПД):</strong> подходит для разовых заказов от физических лиц и зарубежных компаний, налог 10%, без отчётности.</li>
+                    <li><strong>ИП (УСН):</strong> если планируется постоянный доход выше 1000 BYN/мес, работа с юрлицами. Регистрация 1–2 дня.</li>
+                    <li><strong>Трудовой договор:</strong> обычное трудоустройство в белорусских компаниях (оформление по ТК).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Контакты и LinkedIn -->
+        <div class="contact-area">
+            <div>
+                <div style="font-weight: 600; margin-bottom: 0.25rem;">📬 Профиль на LinkedIn</div>
+                <div style="font-size: 0.9rem; color: #334155;">Актуальный профиль с портфолио, рекомендации и история проектов</div>
+            </div>
+            <a href="#" class="linkedin-btn" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
+                Перейти к профилю
+            </a>
+        </div>
+        <hr>
+        <div class="footer-note">
+            🔗 Репозитории проектов доступны по запросу | Открыт для сотрудничества и новых возможностей<br>
+            ✅ Резюме, портфолио и профиль на LinkedIn готовы — можно начинать поиск первых заказов уже сегодня.
+        </div>
+    </div>
+</div>
+</body>
+</html>

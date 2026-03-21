@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Stacked – Детальный план на 112 дней (версия 3.0)</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 1200px; margin: 20px auto; padding: 0 20px; background: #f9f9f9; }
+        h1, h2, h3 { color: #333; }
+        table { border-collapse: collapse; width: 100%; margin: 15px 0; background: white; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .done { background-color: #e6ffe6; }
+        .in-progress { background-color: #fff0cc; }
+        .reflection { background-color: #f0f0f0; font-style: italic; }
+        .toc { background: white; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .toc ul { columns: 2; list-style-type: none; padding-left: 0; }
+        .toc li { margin: 5px 0; }
+        .toc a { text-decoration: none; color: #0066cc; }
+        .toc a:hover { text-decoration: underline; }
+        .footer { margin-top: 30px; padding-top: 15px; border-top: 2px solid #ccc; font-style: italic; }
+        .nav-links { background: white; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .nav-links a { margin-right: 15px; text-decoration: none; color: #0066cc; font-weight: 500; }
+        .nav-links a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="nav-links">
+        🔗 <a href="index.html">Главный роадмап (v3.0)</a> | <a href="profile.html">Моё портфолио</a>
+    </div>
+
+    <h1>📅 Stacked – Детальный план на 112 дней (версия 3.0)</h1>
+    <p><em>Сквозной счёт дней с привязкой к календарю. Воскресенья – дни рефлексии (без нового кода).</em></p>
+    <p><strong>Статус на 22 марта 2026:</strong> дни 1–22 выполнены. День 22 (понедельник) – создан профиль LinkedIn (в черновике). Далее – план на дни 23–112.</p>
+
+    <!-- НЕДЕЛЯ 4 (дни 22–28) -->
+    <h2 id="week4">📆 Неделя 4: LinkedIn + Clean Architecture (дни 22–28)</h2>
+    <table>
+        <tr><th>День</th><th>Календарь</th><th>Статус</th><th>Содержание</th>             </tr>
+        <tr class="done"><td>22</td><td>Пн</td><td>✅</td><td>Создание профиля LinkedIn (черновик), заполнение разделов по шаблону, настройка кнопки «Open to Work».</td></tr>
+        <tr class="in-progress"><td>23</td><td>Вт</td><td>⏳</td><td>Создание модели Post в Domain, интерфейса IPostRepository в Application.</td></tr>
+        <tr><td>24</td><td>Ср</td><td>📌</td><td>Реализация PostRepository в Infrastructure (EF Core + SQLite).</td></tr>
+        <tr><td>25</td><td>Чт</td><td>📌</td><td>Создание команд/запросов CQRS: CreatePostCommand, GetPostQuery, UpdatePostCommand, DeletePostCommand.</td></tr>
+        <tr><td>26</td><td>Пт</td><td>📌</td><td>Добавление валидации через FluentValidation.</td></tr>
+        <tr><td>27</td><td>Сб</td><td>📌</td><td>Создание PostsController в Web API, настройка маршрутов.</td></tr>
+        <tr class="reflection"><td>28</td><td>Вс</td><td>📌</td><td>День рефлексии: проверка API, разбор ошибок, чтение Троелсена.</td></tr>
+     </table>
+
+    <!-- НЕДЕЛЯ 5 (дни 29–35) -->
+    <h2>📆 Неделя 5: База данных, миграции, публикация (дни 29–35)</h2>
+    <table>
+        <tr><td>29</td><td>Пн</td><td>📌</td><td>Миграции EF Core, настройка SQLite/PostgreSQL, заполнение тестовыми данными.</td></tr>
+        <tr><td>30</td><td>Вт</td><td>📌</td><td>Интеграция Swagger, тестирование API через Postman.</td></tr>
+        <tr><td>31</td><td>Ср</td><td>📌</td><td>Деплой API на бесплатный хостинг (Render / Azure App Service).</td></tr>
+        <tr><td>32</td><td>Чт</td><td>📌</td><td>Настройка CI/CD (GitHub Actions) для автоматического деплоя.</td></tr>
+        <tr><td>33</td><td>Пт</td><td>📌</td><td>Публикация ссылки на API в LinkedIn, пост о запуске Stacked.</td></tr>
+        <tr><td>34</td><td>Сб</td><td>📌</td><td>Код-ревью, рефакторинг, обработка ошибок.</td></tr>
+        <tr class="reflection"><td>35</td><td>Вс</td><td>📌</td><td>День рефлексии: анализ пройденного, планирование Telegram-бота.</td></tr>
+    </table>
+
+    <!-- НЕДЕЛЯ 6 (дни 36–42) – Telegram-бот -->
+    <h2>📆 Неделя 6: Telegram-бот (дни 36–42)</h2>
+    <table>
+        <tr><td>36</td><td>Пн</td><td>📌</td><td>Создание Telegram-бота через BotFather, настройка webhook/поллинга.</td></tr>
+        <tr><td>37</td><td>Вт</td><td>📌</td><td>Реализация команд /start, /help.</td></tr>
+        <tr><td>38</td><td>Ср</td><td>📌</td><td>Команда /create (создание поста через Telegram).</td></tr>
+        <tr><td>39</td><td>Чт</td><td>📌</td><td>Команда /list (просмотр всех постов).</td></tr>
+        <tr><td>40</td><td>Пт</td><td>📌</td><td>Команды /edit и /delete.</td></tr>
+        <tr><td>41</td><td>Сб</td><td>📌</td><td>Логирование, обработка ошибок в боте.</td></tr>
+        <tr class="reflection"><td>42</td><td>Вс</td><td>📌</td><td>День рефлексии: тестирование бота, чтение документации по Semantic Kernel.</td></tr>
+    </table>
+
+    <!-- НЕДЕЛЯ 7 (дни 43–49) – AI-ассистент -->
+    <h2>📆 Неделя 7: AI-ассистент (Semantic Kernel) (дни 43–49)</h2>
+    <table>
+        <tr><td>43</td><td>Пн</td><td>📌</td><td>Установка Semantic Kernel, настройка подключения к AI-модели.</td></tr>
+        <tr><td>44</td><td>Вт</td><td>📌</td><td>Создание плагинов: «Посты», «Погода» и т.д.</td></tr>
+        <tr><td>45</td><td>Ср</td><td>📌</td><td>Интеграция AI-ассистента в API (эндпоинт /api/ai/ask).</td></tr>
+        <tr><td>46</td><td>Чт</td><td>📌</td><td>Интеграция AI-ассистента в Telegram-бота (команда /ask).</td></tr>
+        <tr><td>47</td><td>Пт</td><td>📌</td><td>Тестирование, настройка промптов, обработка ошибок.</td></tr>
+        <tr><td>48</td><td>Сб</td><td>📌</td><td>Создание документации по AI-фичам для портфолио.</td></tr>
+        <tr class="reflection"><td>49</td><td>Вс</td><td>📌</td><td>День рефлексии: анализ работы AI, чтение о современных LLM.</td></tr>
+    </table>
+
+    <!-- НЕДЕЛЯ 8 (дни 50–56) – Фронтенд старт -->
+    <h2>📆 Неделя 8: Фронтенд (React + TypeScript) – старт (дни 50–56)</h2>
+    <table>
+        <tr><td>50</td><td>Пн</td><td>📌</td><td>Установка Node.js, создание React-приложения с Vite + TypeScript.</td></tr>
+        <tr><td>51</td><td>Вт</td><td>📌</td><td>Компоненты: Header, Footer, PostList.</td></tr>
+        <tr><td>52</td><td>Ср</td><td>📌</td><td>Настройка роутинга (React Router), страница отдельного поста.</td></tr>
+        <tr><td>53</td><td>Чт</td><td>📌</td><td>Подключение к API Stacked, отображение списка постов.</td></tr>
+        <tr><td>54</td><td>Пт</td><td>📌</td><td>Форма добавления поста (админка).</td></tr>
+        <tr><td>55</td><td>Сб</td><td>📌</td><td>Стилизация (Tailwind), адаптивный дизайн.</td></tr>
+        <tr class="reflection"><td>56</td><td>Вс</td><td>📌</td><td>День рефлексии: рефакторинг фронтенда, чтение документации React.</td></tr>
+    </table>
+
+    <!-- НЕДЕЛЯ 9 (дни 57–63) – интеграция фронта -->
+    <h2>📆 Неделя 9: Фронтенд – интеграция и публикация (дни 57–63)</h2>
+    <table>
+        <tr><td>57</td><td>Пн</td><td>📌</td><td>Аутентификация на фронте (JWT, login/register).</td></tr>
+        <tr><td>58</td><td>Вт</td><td>📌</td><td>Защищённые маршруты, управление состоянием (React Context/Redux).</td></tr>
+        <tr><td>59</td><td>Ср</td><td>📌</td><td>Форма редактирования поста, удаление.</td></tr>
+        <tr><td>60</td><td>Чт</td><td>📌</td><td>Интеграция AI-ассистента на фронте (виджет чата).</td></tr>
+        <tr><td>61</td><td>Пт</td><td>📌</td><td>Деплой фронтенда на Netlify/Vercel, связывание с API.</td></tr>
+        <tr><td>62</td><td>Сб</td><td>📌</td><td>Тестирование, устранение багов, финальная полировка.</td></tr>
+        <tr class="reflection"><td>63</td><td>Вс</td><td>📌</td><td>День рефлексии: подготовка демо, написание поста о Stacked для LinkedIn.</td></tr>
+    </table>
+
+    <!-- НЕДЕЛЯ 10 (дни 64–70) – Docker, CI/CD -->
+    <h2>📆 Неделя 10: Docker, CI/CD (дни 64–70)</h2>
+    <table>
+        <tr><td>64</td><td>Пн</td><td>📌</td><td>Изучение Docker: Dockerfile для API, docker-compose.</td></tr>
+        <tr><td>65</td><td>Вт</td><td>📌</td><td>Контейнеризация API и фронтенда.</td></tr>
+        <tr><td>66</td><td>Ср</td><td>📌</td><td>Настройка GitHub Actions для сборки и тестирования.</td></tr>
+        <tr><td>67</td><td>Чт</td><td>📌</td><td>CI/CD пайплайн: автоматический деплой на сервер.</td></tr>
+        <tr><td>68</td><td>Пт</td><td>📌</td><td>Настройка переменных окружения, секретов.</td></tr>
+        <tr><td>69</td><td>Сб</td><td>📌</td><td>Тестирование пайплайна, отладка.</td></tr>
+        <tr class="reflection"><td>70</td><td>Вс</td><td>📌</td><td>День рефлексии: анализ CI/CD, чтение документации по Azure.</td></tr>
+    </table>
+
+    <!-- НЕДЕЛЯ 11 (дни 71–77) – Azure -->
+    <h2>📆 Неделя 11: Azure (дни 71–77)</h2>
+    <tr>
+        <tr><td>71</td><td>Пн</td><td>📌</td><td>Регистрация в Azure, создание App Service.</td></tr>
+        <tr><td>72</td><td>Вт</td><td>📌</td><td>Деплой API в Azure, настройка базы данных (Azure SQL).</td></tr>
+        <tr><td>73</td><td>Ср</td><td>📌</td><td>Настройка Blob Storage для изображений.</td></tr>
+        <tr><td>74</td><td>Чт</td><td>📌</td><td>Мониторинг и логирование (Application Insights).</td></tr>
+        <tr><td>75</td><td>Пт</td><td>📌</td><td>Масштабирование, оптимизация производительности.</td></tr>
+        <tr><td>76</td><td>Сб</td><td>📌</td><td>Тестирование в облаке, исправление ошибок.</td></tr>
+        <tr class="reflection"><td>77</td><td>Вс</td><td>📌</td><td>День рефлексии: оценка затрат, планирование фриланс-модулей.</td></tr>
+    </table>
+
+    <!-- НЕДЕЛЯ 12 (дни 78–84) – тестирование -->
+    <h2>📆 Неделя 12: Тестирование (дни 78–84)</h2>
+    表格
+        <tr><td>78</td><td>Пн</td><td>📌</td><td>Юнит-тесты xUnit для репозитория и сервисов.</td></tr>
+        <tr><td>79</td><td>Вт</td><td>📌</td><td>Моки (Moq), тесты контроллеров.</td></tr>
+        <tr><td>80</td><td>Ср</td><td>📌</td><td>Интеграционные тесты API.</td></tr>
+        <tr><td>81</td><td>Чт</td><td>📌</td><td>Тесты React компонентов (React Testing Library).</td></tr>
+        <tr><td>82</td><td>Пт</td><td>📌</td><td>E2E тесты (Cypress/Playwright) для ключевых сценариев.</td></tr>
+        <tr><td>83</td><td>Сб</td><td>📌</td><td>Покрытие кода, рефакторинг для повышения тестируемости.</td></tr>
+        <tr class="reflection"><td>84</td><td>Вс</td><td>📌</td><td>День рефлексии: анализ тестов, планирование фриланс-подготовки.</td></tr>
+    </table>
+
+    <!-- НЕДЕЛЯ 13 (дни 85–91) – фриланс модули -->
+    <h2>📆 Неделя 13: Фриланс-модули (дни 85–91)</h2>
+    表格
+        <tr><td>85</td><td>Пн</td><td>📌</td><td>Регистрация на Upwork, Fiverr, Toptal. Заполнение профилей.</td></tr>
+        <tr><td>86</td><td>Вт</td><td>📌</td><td>Создание портфолио на основе проектов Stacked и Telegram-бота.</td></tr>
+        <tr><td>87</td><td>Ср</td><td>📌</td><td>Написание шаблонов proposals (откликов) для разных типов заказов.</td></tr>
+        <tr><td>88</td><td>Чт</td><td>📌</td><td>Юридические аспекты: договоры, налоги (НПД, ИП).</td></tr>
+        <tr><td>89</td><td>Пт</td><td>📌</td><td>Поиск первых заказов, отклики на 10+ вакансий.</td></tr>
+        <tr><td>90</td><td>Сб</td><td>📌</td><td>Подготовка к интервью, прохождение тестовых заданий.</td></tr>
+        <tr class="reflection"><td>91</td><td>Вс</td><td>📌</td><td>День рефлексии: анализ первых откликов, корректировка стратегии.</td></tr>
+    </table>
+
+    <!-- НЕДЕЛЯ 14 (дни 92–98) – активный поиск и доработки -->
+    <h2>📆 Неделя 14: Активный поиск и доработки (дни 92–98)</h2>
+    表格
+        <tr><td>92</td><td>Пн</td><td>📌</td><td>Участие в open source (Clean Architecture Template, ASP.NET Core).</td></tr>
+        <tr><td>93</td><td>Вт</td><td>📌</td><td>Обновление LinkedIn постами о новых фичах Stacked.</td></tr>
+        <tr><td>94</td><td>Ср</td><td>📌</td><td>Расширение функционала: добавить комментарии к постам.</td></tr>
+        <tr><td>95</td><td>Чт</td><td>📌</td><td>Интернационализация (i18n) на фронтенде.</td></tr>
+        <tr><td>96</td><td>Пт</td><td>📌</td><td>Оптимизация производительности API.</td></tr>
+        <tr><td>97</td><td>Сб</td><td>📌</td><td>Написание статьи о проекте на Habr/Medium (черновик).</td></tr>
+        <tr class="reflection"><td>98</td><td>Вс</td><td>📌</td><td>День рефлексии: финальная оценка готовности к трудоустройству.</td></tr>
+    </table>
+
+    <!-- НЕДЕЛЯ 15 (дни 99–105) – резюме, интервью -->
+    <h2>📆 Неделя 15: Подготовка резюме и интервью (дни 99–105)</h2>
+    表格
+        <tr><td>99</td><td>Пн</td><td>📌</td><td>Составление резюме (CV) на русском и английском.</td></tr>
+        <tr><td>100</td><td>Вт</td><td>📌</td><td>Прохождение тестовых заданий с предыдущих собеседований.</td></tr>
+        <tr><td>101</td><td>Ср</td><td>📌</td><td>Тренировка собеседований (алгоритмы, system design).</td></tr>
+        <tr><td>102</td><td>Чт</td><td>📌</td><td>Рассмотрение предложений, переговоры о зарплате.</td></tr>
+        <tr><td>103</td><td>Пт</td><td>📌</td><td>Подготовка к релокации (сбор документов, изучение визовых вопросов).</td></tr>
+        <tr><td>104</td><td>Сб</td><td>📌</td><td>Завершение фриланс-модулей, фиксация плана действий после трудоустройства.</td></tr>
+        <tr class="reflection"><td>105</td><td>Вс</td><td>📌</td><td>День рефлексии: итоги 4-месячного обучения, планирование дальнейшего развития.</td></tr>
+    </table>
+
+    <!-- НЕДЕЛЯ 16 (дни 106–112) – резерв -->
+    <h2>📆 Неделя 16: Итоги и следующий шаг (дни 106–112)</h2>
+    表格
+        <tr><td>106</td><td>Пн</td><td>📌</td><td>Доработка портфолио, сбор обратной связи.</td></tr>
+        <tr><td>107</td><td>Вт</td><td>📌</td><td>Создание демо-видео проектов.</td></tr>
+        <tr><td>108</td><td>Ср</td><td>📌</td><td>Написание финального поста в LinkedIn о завершении обучения.</td></tr>
+        <tr><td>109</td><td>Чт</td><td>📌</td><td>Анализ рынка, выбор специализации (Cloud / Backend / AI).</td></tr>
+        <tr><td>110</td><td>Пт</td><td>📌</td><td>Подготовка к переезду (если релокация).</td></tr>
+        <tr><td>111</td><td>Сб</td><td>📌</td><td>Резервный день: устранение недочётов, ответы на последние вопросы.</td></tr>
+        <tr class="reflection"><td>112</td><td>Вс</td><td>📌</td><td>Финальный день рефлексии: подведение итогов 4 месяцев, составление отчёта, планирование карьеры.</td></tr>
+    </table>
+
+    <div class="footer">
+        <p>📌 <strong>Примечание:</strong> Все дни рефлексии (воскресенья) отмечены серым фоном. В эти дни новый код не пишется, только анализ, чтение и планирование.</p>
+        <p>✅ Дни 1–22 полностью выполнены. С 23-го дня план является прогнозным и может корректироваться по ходу обучения. Актуальный статус ежедневно фиксируется в отчётах «день X итог».</p>
+        <p>🔗 <a href="index.html">Вернуться к главному роадмапу</a> | <a href="profile.html">Моё портфолио</a></p>
+    </div>
+</body>
+</html>

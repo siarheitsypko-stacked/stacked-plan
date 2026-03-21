@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Сергей | Инженер-разработчик C# / .NET | Карьерные возможности</title>
+    <title>Сергей | C# / .NET Developer | Портфолио и карьера</title>
     <style>
         * {
             margin: 0;
@@ -249,30 +249,51 @@
             background: #004182;
         }
 
-        hr {
-            border: none;
-            border-top: 1px solid #e2e8f0;
-            margin: 1.5rem 0;
-        }
-
         .footer-note {
             text-align: center;
             font-size: 0.8rem;
             color: #64748b;
             margin-top: 1rem;
         }
+
+        .nav-links {
+            background: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .nav-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border: none;
+            border-top: 1px solid #e2e8f0;
+        }
     </style>
 </head>
 <body>
 <div class="container">
+    <div class="nav-links">
+        🔗 <a href="index.html">Главный роадмап (v3.0)</a> | 
+        <a href="detailed-plan.html">Детальный план на 112 дней</a>
+    </div>
     <div class="profile-header">
         <div class="name">Сергей</div>
-        <div class="title">C# / .NET разработчик | Инженер-системотехник</div>
+        <div class="title">C# / .NET Developer | Инженер-системотехник</div>
         <div class="badge">📍 Беларусь · Открыт к удалённой работе и релокации</div>
     </div>
     
     <div class="content">
-        <!-- Образование и мышление -->
+        <!-- Образование и подход -->
         <div class="section">
             <div class="section-title">Образование и подход</div>
             <div class="education-card">
@@ -281,27 +302,36 @@
             </div>
         </div>
 
-        <!-- Проекты -->
+        <!-- Проекты (обновлены с учётом статуса) -->
         <div class="section">
             <div class="section-title">Проекты</div>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-name">BlogConsole</div>
                     <div class="project-stack">C# · .NET 8 · Git · JSON · Repository pattern</div>
-                    <div class="project-desc">Консольное приложение для управления постами блога с полным CRUD, сохранением в JSON и чистой архитектурой (интерфейсы, репозиторий). Реализована валидация, работа с файлами, LINQ, отказоустойчивость.</div>
-                    <a href="#" class="project-link">🔗 GitHub →</a>
+                    <div class="project-desc">
+                        Консольное приложение для управления постами блога с полным CRUD, сохранением в JSON и чистой архитектурой (интерфейсы, репозиторий). 
+                        Реализована валидация, работа с файлами, LINQ, отказоустойчивость.
+                    </div>
+                    <a href="https://github.com/siarheitsypko-stacked/stacked-plan/tree/main/BlogConsole" class="project-link">🔗 GitHub (репозиторий) →</a>
                 </div>
                 <div class="project-card">
                     <div class="project-name">Stacked (Web API)</div>
                     <div class="project-stack">ASP.NET Core · Clean Architecture · CQRS · EF Core · Swagger</div>
-                    <div class="project-desc">Полноценное веб-API для блог-платформы, построенное на принципах Clean Architecture. Слои: Domain, Application, Infrastructure, Web. Использован CQRS (MediatR), валидация FluentValidation, взаимодействие с PostgreSQL.</div>
-                    <a href="#" class="project-link">🚀 Демо API →</a>
+                    <div class="project-desc">
+                        Полноценное веб-API для блог-платформы, построенное на принципах Clean Architecture. 
+                        Слои: Domain, Application, Infrastructure, Web. Использован CQRS (MediatR), валидация FluentValidation, взаимодействие с PostgreSQL (в процессе).
+                    </div>
+                    <a href="#" class="project-link">🚀 Демо API (скоро) →</a>
                 </div>
                 <div class="project-card">
                     <div class="project-name">Telegram‑бот (AI assistant)</div>
                     <div class="project-stack">C# · Telegram.Bot · AI (Semantic Kernel) · Docker</div>
-                    <div class="project-desc">Ассистент для работы с блогом: создание/просмотр постов через Telegram, интеграция с AI-моделями (поддержка локального инференса). Демонстрирует навыки интеграции с внешними API и гибридных AI-сценариев.</div>
-                    <a href="#" class="project-link">🤖 Бот в Telegram →</a>
+                    <div class="project-desc">
+                        Ассистент для работы с блогом: создание/просмотр постов через Telegram, интеграция с AI-моделями (поддержка локального инференса). 
+                        Демонстрирует навыки интеграции с внешними API и гибридных AI-сценариев.
+                    </div>
+                    <a href="#" class="project-link">🤖 Бот в Telegram (в разработке) →</a>
                 </div>
             </div>
         </div>
@@ -326,91 +356,73 @@
             </div>
         </div>
 
-        <!-- 🔥 НОВЫЙ БЛОК: КАРЬЕРА И ВОЗМОЖНОСТИ -->
+        <!-- Доп. блок: системное мышление -->
+        <div class="section">
+            <div class="section-title">Ключевые компетенции</div>
+            <div class="education-card" style="background:#fefce8; border-color:#fde047;">
+                <div class="education-title">⚙️ Инженер → Software Engineer</div>
+                <div class="education-desc">
+                    Инженерное образование даёт структурный подход: умение декомпозировать сложные системы, управлять рисками, проектировать надёжные компоненты.
+                    В разработке — это автоматически означает чистый код, тестируемость, масштабируемость и понимание архитектуры enterprise-приложений.
+                </div>
+            </div>
+        </div>
+
+        <!-- Карьерные возможности (актуально) -->
         <div class="section">
             <div class="section-title">Где и как работать уже сейчас</div>
             <div class="career-grid">
                 <div class="career-card">
-                    <h3>🖥️ Фриланс / Аутстафф (C# & .NET)</h3>
-                    <div class="career-tag">старт через 2–3 недели</div>
+                    <h3>🖥️ Фриланс / Аутстафф</h3>
+                    <div class="career-tag">старт в ближайшее время</div>
                     <ul class="career-list">
-                        <li>Upwork, Fiverr, Freelancer — первые заказы на консольные утилиты, парсинг, работу с JSON/API, мелкие проекты на ASP.NET Core.</li>
-                        <li>Telegram‑каналы: «C# фриланс», «.NET заказы», «IT‑фриланс Беларусь» – быстрые задачи без комиссии.</li>
-                        <li>Аутстафф через белорусские компании: EPAM (Junior Lab), IBA, Itransition, Andersen (стажировки и junior программы).</li>
+                        <li>Upwork, Fiverr, Freelancer — мелкие заказы на C# / .NET.</li>
+                        <li>Telegram-каналы: «C# фриланс», «.NET заказы».</li>
+                        <li>Аутстафф через белорусские компании (EPAM, IBA, Itransition).</li>
                     </ul>
                 </div>
                 <div class="career-card">
                     <h3>🏢 Официальное трудоустройство</h3>
                     <div class="career-tag">junior / trainee стажировки</div>
                     <ul class="career-list">
-                        <li>Платформы: hh.by, rabota.by, LinkedIn (фильтр «Беларусь» + «удалённо»).</li>
-                        <li>Госсектор (Белорусские госструктуры, «ГИВЦ», «Белтехэкспорт») – требуют инженерное образование, что у тебя есть, ценят системность.</li>
-                        <li>Частные компании (Wargaming, Intetics, Andersen Lab, Oxagile) – junior .NET позиции с возможностью полной удалёнки.</li>
+                        <li>hh.by, rabota.by, LinkedIn (фильтр «Беларусь» + «удалённо»).</li>
+                        <li>Госсектор, частные компании (Wargaming, Andersen, Oxagile).</li>
                     </ul>
                 </div>
                 <div class="career-card">
                     <h3>⚖️ Самозанятость / ИП</h3>
                     <div class="career-tag">налог на проф. доход (НПД)</div>
                     <ul class="career-list">
-                        <li>Официальный статус самозанятого в Беларуси (приложение «Налог на профессиональный доход»). Позволяет работать с зарубежными заказчиками (B2B) и выставлять счета, налог 10%.</li>
-                        <li>Регистрация ИП (упрощённая система) — подходит для крупных контрактов и работы с компаниями РФ/ЕС.</li>
-                        <li>Уже сейчас можно заключать договоры на мелкие доработки (исправление багов, написание тестов, настройка CI/CD).</li>
+                        <li>Официальный статус самозанятого, налог 10%.</li>
+                        <li>Регистрация ИП для крупных контрактов.</li>
                     </ul>
                 </div>
                 <div class="career-card">
                     <h3>🌍 Международная удалёнка</h3>
                     <div class="career-tag">remote .NET / C# junior+</div>
                     <ul class="career-list">
-                        <li>Платформы: We Work Remotely, RemoteOK, Turing, Arc.dev – фильтр «.NET», «C#». Требуют английский B1+ (у тебя Intermediate).</li>
-                        <li>Студенческая / junior программы в GitHub Education (Copilot), Microsoft Learn (сертификаты) повышают шансы на международные стажировки.</li>
-                        <li>Проекты open source (Clean Architecture Template, ASP.NET Core) — участие в issues даёт строчку в резюме и упрощает вход в зарубежные стартапы.</li>
+                        <li>We Work Remotely, RemoteOK, Turing, Arc.dev.</li>
+                        <li>Участие в open source для повышения шансов.</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Практический план: что можно делать прямо сейчас -->
-        <div class="section">
-            <div class="section-title">🚀 Стартовая дорожная карта (ближайшие 1–2 месяца)</div>
-            <div class="education-card" style="background:#fef9e3; border-left:4px solid #eab308;">
-                <div class="education-title">📌 Реальные шаги для первых заказов</div>
-                <ul style="margin-top: 0.75rem; margin-left: 1.25rem; color: #334155;">
-                    <li><strong>Завершить портфолио:</strong> выложить BlogConsole, Stacked и Telegram‑бота на GitHub с README (уже есть).</li>
-                    <li><strong>Аккаунты на биржах:</strong> зарегистрироваться на Upwork, Fiverr, подготовить краткое портфолио с описанием проектов.</li>
-                    <li><strong>Собрать первые фриланс‑задачи:</strong> написать парсер данных, консольный инструмент для обработки логов, простой Web API для todo‑листа или калькулятора.</li>
-                    <li><strong>Параллельно откликаться:</strong> на hh.by (стажировки «.NET Developer Trainee»), отправлять CV с акцентом на инженерный диплом + проекты.</li>
-                    <li><strong>Использовать LinkedIn:</strong> оформить профиль как в этом HTML, подключить английскую версию, добавить открытые проекты и контакты.</li>
-                </ul>
-                <div class="education-title" style="margin-top: 1rem;">💰 Ожидаемые доходы на старте</div>
-                <ul style="margin-left: 1.25rem; color: #334155;">
-                    <li>Мелкие фриланс-задачи: $50–300 за проект (2–3 задачи в месяц).</li>
-                    <li>Стажировка/part‑time в компании: $300–700/мес.</li>
-                    <li>Удалённые заказы через биржи: $10–25/час при занятости 10–20 часов в неделю.</li>
-                </ul>
-                <div class="education-title" style="margin-top: 1rem;">📋 Легальные формы</div>
-                <ul style="margin-left: 1.25rem; color: #334155;">
-                    <li><strong>Самозанятость (НПД):</strong> подходит для разовых заказов от физических лиц и зарубежных компаний, налог 10%, без отчётности.</li>
-                    <li><strong>ИП (УСН):</strong> если планируется постоянный доход выше 1000 BYN/мес, работа с юрлицами. Регистрация 1–2 дня.</li>
-                    <li><strong>Трудовой договор:</strong> обычное трудоустройство в белорусских компаниях (оформление по ТК).</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Контакты и LinkedIn -->
+        <!-- Ссылки на LinkedIn и другие соцсети (пока заглушка) -->
         <div class="contact-area">
             <div>
                 <div style="font-weight: 600; margin-bottom: 0.25rem;">📬 Профиль на LinkedIn</div>
-                <div style="font-size: 0.9rem; color: #334155;">Актуальный профиль с портфолио, рекомендации и история проектов</div>
+                <div style="font-size: 0.9rem; color: #334155;">(в процессе заполнения – будет добавлен позже)</div>
             </div>
-            <a href="#" class="linkedin-btn" target="_blank">
+            <a href="#" class="linkedin-btn" target="_blank" style="opacity:0.6; pointer-events:none;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
-                Перейти к профилю
+                LinkedIn (скоро)
             </a>
         </div>
         <hr>
         <div class="footer-note">
             🔗 Репозитории проектов доступны по запросу | Открыт для сотрудничества и новых возможностей<br>
-            ✅ Резюме, портфолио и профиль на LinkedIn готовы — можно начинать поиск первых заказов уже сегодня.
+            📄 <a href="detailed-plan.html">Детальный план обучения на 112 дней</a> — моя система развития
         </div>
     </div>
 </div>

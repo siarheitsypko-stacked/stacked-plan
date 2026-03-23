@@ -1,205 +1,172 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Stacked – Главный роадмап (настольная книга) v3.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked | Главная страница</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 1200px; margin: 20px auto; padding: 0 20px; background: #f9f9f9; }
-        h1, h2, h3 { color: #333; }
-        table { border-collapse: collapse; width: 100%; margin: 15px 0; background: white; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
-        code { background: #eee; padding: 2px 5px; border-radius: 3px; }
-        pre { background: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
-        .box { background: white; padding: 15px; margin: 15px 0; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .footer { margin-top: 30px; padding-top: 15px; border-top: 2px solid #ccc; font-style: italic; }
-        .motivation { background-color: #e6f2ff; padding: 10px; border-left: 5px solid #0066cc; }
-        .strict { background-color: #ffe6e6; padding: 10px; border-left: 5px solid #cc0000; }
-        .version { background-color: #d9edf7; padding: 5px; font-size: 0.9em; border-radius: 3px; }
-        .toc { background: white; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        .toc ul { list-style-type: none; padding-left: 0; columns: 2; }
-        .toc li { margin: 5px 0; }
-        .toc a { text-decoration: none; color: #0066cc; }
-        .toc a:hover { text-decoration: underline; }
-        .neural { background-color: #f0e6ff; padding: 2px 5px; border-radius: 3px; font-weight: bold; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f1f5f9;
+            color: #0f172a;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .nav-bar {
+            background: #0f172a;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.1);
+        }
+        .nav-bar a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+        .nav-bar a:hover {
+            background: #1e293b;
+            color: white;
+        }
+        .hero {
+            background: white;
+            border-radius: 2rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+        .hero p {
+            color: #334155;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .card p {
+            color: #334155;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .card .btn {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .card .btn:hover {
+            background: #2563eb;
+        }
+        .footer {
+            margin-top: 2.5rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #475569;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.5rem;
+        }
     </style>
 </head>
 <body>
-    <h1>📌 Stacked – Главный роадмап (настольная книга) v3.0</h1>
-    <p class="version">Версия: 3.0 (целая, карьерная) | Дата: 22 марта 2026 | Следующее обновление: по мере прохождения</p>
-    <p><em>Этот документ является главным справочником по организации обучения и карьерного развития. Он фиксирует все достижения, текущий статус и план дальнейших действий.</em></p>
-
-    <!-- Навигация по HTML-страницам -->
-    <div class="box">
-        <h2>📖 Другие страницы проекта</h2>
-        <ul>
-            <li>🎯 <a href="profile.html">Портфолио и карьерные возможности</a> – мои проекты, навыки, готовность к работе.</li>
-            <li>📅 <a href="detailed-plan.html">Детальный план на 112 дней</a> – пошаговое расписание обучения с отметками выполненного.</li>
-        </ul>
+<div class="container">
+    <div class="nav-bar">
+        <a href="index.html">🏠 Главная</a>
+        <a href="roadmap.html">📘 Роадмап</a>
+        <a href="profile.html">👤 Профиль</a>
+        <a href="projects.html">📁 Проекты</a>
+        <a href="resume.html">📄 Резюме</a>
+        <a href="detailed-plan.html">📅 Детальный план</a>
+        <a href="notes.html">📝 Заметки</a>
     </div>
 
-    <!-- СОДЕРЖАНИЕ (как в v3.0, но сокращённо) -->
-    <div class="toc">
-        <h2>📑 Содержание</h2>
-        <ul>
-            <li><a href="#section1">1. Общая информация и цели</a></li>
-            <li><a href="#section2">2. Роль тренера</a></li>
-            <li><a href="#section3">3. Полный роадмап на 4 месяца (обновлённый)</a></li>
-            <li><a href="#section4">4. Детальный план по месяцам (кратко)</a></li>
-            <li><a href="#section5">5. План по неделям</a></li>
-            <li><a href="#section6">6. Детальный план по дням (отдельный документ)</a></li>
-            <li><a href="#section7">7. Теоретические сессии и нейронные связи</a></li>
-            <li><a href="#section8">8. Разделение направлений: синтаксис, архитектура, теория</a></li>
-            <li><a href="#section9">9. Ежедневные действия и рефлексия</a></li>
-            <li><a href="#section10">10. Текущий статус выполнения (на 22 марта 2026)</a></li>
-            <li><a href="#section11">11. Карьерный трек: LinkedIn, портфолио, поиск работы</a></li>
-            <li><a href="#section12">12. Ближайшие шаги (после версии 3.0)</a></li>
-            <li><a href="#section13">13. История версий</a></li>
-            <li><a href="#section14">14. Завершающая мотивация</a></li>
-        </ul>
+    <div class="hero">
+        <h1>📌 Stacked — портфолио и система обучения</h1>
+        <p>Документы, которые описывают мой путь к профессии C# / .NET разработчика: от консольного прототипа до полноценного блога, AI-ассистента и Telegram‑бота.</p>
     </div>
 
-    <!-- Здесь идут разделы (содержание такое же, как в роадмапе v3.0, который мы создавали ранее) -->
-    <div class="box" id="section1">
-        <h2>1. Общая информация и цели</h2>
-        <ul>
-            <li><strong>Цель:</strong> Эмиграция из Беларуси, обеспечение семьи, работа на себя (фриланс / собственные проекты) → постоянная удалённая работа или релокация в IT-компанию.</li>
-            <li><strong>Стек:</strong> C#, ASP.NET Core Web API, React + TypeScript, EF Core, SQL, Docker, Azure, CI/CD, Telegram-бот, локальный AI (DeepSeek-R1, Semantic Kernel).</li>
-            <li><strong>Проекты:</strong> BlogConsole (завершён), Stacked (Web API + фронтенд), Telegram-бот, AI-ассистент.</li>
-            <li><strong>Ресурсы:</strong> Михаил Русаков (база), Эндрю Троелсен (фундамент), AI-инструменты (Windsurf/Cascade, Codeium), GitHub.</li>
-            <li><strong>Счёт дней:</strong> сквозной, привязан к календарю. На текущий момент (22 марта 2026) – день 22.</li>
-            <li><strong>Воскресенье – день рефлексии:</strong> анализ недели, планирование, чтение, без нового кода.</li>
-        </ul>
+    <div class="cards">
+        <div class="card">
+            <h2>📘 Главный роадмап</h2>
+            <p>Полный план обучения на 4 месяца (версия 3.1). Разделы: организация процесса, роль тренера, планы по месяцам/неделям, ежедневные действия, история версий.</p>
+            <a href="roadmap.html" class="btn">Открыть →</a>
+        </div>
+        <div class="card">
+            <h2>👤 Профиль разработчика</h2>
+            <p>Публичная визитка с тремя основными проектами, технологическим стеком, ключевыми компетенциями и карьерными возможностями (фриланс, аутстафф, релокация).</p>
+            <a href="profile.html" class="btn">Открыть →</a>
+        </div>
+        <div class="card">
+            <h2>📁 Страница проектов</h2>
+            <p>Объединённая схема: три проекта профиля (BlogConsole, Stacked API, Telegram‑бот) и все этапы роадмапа, которые их формируют. Связи и детали.</p>
+            <a href="projects.html" class="btn">Открыть →</a>
+        </div>
+        <div class="card">
+            <h2>📄 Резюме</h2>
+            <p>Готовое резюме для отправки работодателям, на фриланс‑биржи и платформы поиска работы. Включает стек, проекты, контакты и карьерные ожидания.</p>
+            <a href="resume.html" class="btn">Открыть →</a>
+        </div>
+        <div class="card">
+            <h2>📅 Детальный план</h2>
+            <p>Пошаговое расписание на 112 дней: каждый день с теорией, практикой, коммитами и английскими терминами. Полная версия для самостоятельного следования.</p>
+            <a href="detailed-plan.html" class="btn">Открыть →</a>
+        </div>
+        <div class="card">
+            <h2>📝 Заметки и ссылки</h2>
+            <p>Сборник полезных материалов, книг, каналов, ресурсов, которые используются в процессе обучения и для развития.</p>
+            <a href="notes.html" class="btn">Открыть →</a>
+        </div>
     </div>
 
-    <div class="box strict" id="section2">
-        <h2>2. Роль тренера</h2>
-        <ul>
-            <li>Быть честным и прямым, требовать выполнения плана.</li>
-            <li>Разбирать ошибки до архитектурного уровня.</li>
-            <li>Контролировать дисциплину (отчёты, коммиты, английский).</li>
-            <li>Ждать твоего отчёта, не делая самостоятельных выводов.</li>
-            <li>Развивать архитектурное мышление и помогать с карьерной стратегией.</li>
-            <li>Следить за актуальностью стека и корректировать план.</li>
-        </ul>
+    <div class="footer">
+        Все документы являются частью проекта Stacked и регулярно обновляются.<br>
+        GitHub: <a href="https://github.com/siarheitsypko-stacked/stacked-plan" target="_blank">siarheitsypko-stacked/stacked-plan</a>
     </div>
-
-    <div class="box" id="section3">
-        <h2>3. Полный роадмап на 4 месяца</h2>
-        <pre>
-Месяц 1 (дни 1–28): Фундамент C# + BlogConsole (завершён)
-   ✅ Строки, switch, классы, JSON, репозиторий, редактирование/удаление.
-   ✅ Обработка ошибок, .gitignore, разделение на файлы, README.
-   ✅ Публикация на GitHub Pages (profile.html).
-
-Месяц 2 (дни 29–56): Clean Architecture, Web API (Stacked), Telegram-бот
-   Неделя 5: Установка Clean Architecture Template, разбор структуры.
-   Неделя 6: Перенос логики в Web API, EF Core, база данных.
-   Неделя 7: Telegram-бот на C# (CRUD через бота).
-   Неделя 8: Интеграция AI (Semantic Kernel) в бота и API.
-
-Месяц 3 (дни 57–84): Фронтенд (React + TypeScript) + LinkedIn
-   Неделя 9–10: Создание клиента для Stacked (React + TS).
-   Неделя 11: Деплой фронта, интеграция с API.
-   Неделя 12: Активное ведение LinkedIn, отклики на вакансии, фриланс-заказы.
-
-Месяц 4 (дни 85–112): Профессиональные инструменты, фриланс, трудоустройство
-   Неделя 13: Docker, CI/CD (GitHub Actions).
-   Неделя 14: Azure, публикация.
-   Неделя 15: Тестирование (xUnit, React Testing Library).
-   Неделя 16: Составление резюме, портфолио, поиск работы, переговоры.
-        </pre>
-    </div>
-
-    <div class="box" id="section4">
-        <h2>4. Детальный план по месяцам</h2>
-        <p><em>См. раздел 3 и понедельный план ниже.</em></p>
-    </div>
-
-    <div class="box" id="section5">
-        <h2>5. План по неделям</h2>
-        表格略 (как в v3.0) – можно оставить полную таблицу или сослаться на detailed-plan.html.
-        <p>Подробное расписание по дням – в <a href="detailed-plan.html">отдельном документе</a>.</p>
-    </div>
-
-    <div class="box" id="section6">
-        <h2>6. Детальный план по дням</h2>
-        <p>Полная версия детального плана на 112 дней – <a href="detailed-plan.html">detailed-plan.html</a>. Там отмечены выполненные дни и предстоящие задачи.</p>
-    </div>
-
-    <div class="box" id="section7">
-        <h2>7. Теоретические сессии</h2>
-        <ul>
-            <li><strong>Карта C# за час</strong> – обзор связей в языке.</li>
-            <li><strong>Тренировка собеседований</strong> – вопросы и ответы.</li>
-            <li><strong>Архитектурное мышление</strong> – разбор Clean Architecture, CQRS, паттернов.</li>
-        </ul>
-    </div>
-
-    <div class="box" id="section8">
-        <h2>8. Разделение направлений</h2>
-        <ul>
-            <li><strong>Синтаксис</strong> – упражнения, Codewars.</li>
-            <li><strong>Архитектура</strong> – изучение open source, проектирование.</li>
-            <li><strong>Теория</strong> – Троелсен, документация.</li>
-        </ul>
-    </div>
-
-    <div class="box" id="section9">
-        <h2>9. Ежедневные действия</h2>
-        <ol>
-            <li>Утро: цель дня, просмотр плана.</li>
-            <li>В дороге: чтение Троелсена 30 мин.</li>
-            <li>Основная работа: практика по текущему этапу, Git-коммит, английские термины.</li>
-            <li>Вечер: отчёт «день X итог».</li>
-            <li>Воскресенье: рефлексия, анализ недели.</li>
-        </ol>
-    </div>
-
-    <div class="box" id="section10">
-        <h2>10. Текущий статус выполнения (на 22 марта 2026)</h2>
-        <ul>
-            <li>✅ BlogConsole завершён, код на GitHub, README, профиль profile.html опубликован.</li>
-            <li>✅ Установлен Clean Architecture Solution Template, создан проект Stacked, запущен локально.</li>
-            <li>✅ Настроен GitHub Pages, ссылка на профиль: <a href="https://siarheitsypko-stacked.github.io/stacked-plan/profile.html">profile.html</a>.</li>
-            <li>✅ Проведена синхронизация между компьютерами, Git настроен.</li>
-            <li>⏳ В процессе: разбор слоёв Clean Architecture, написание контроллеров для постов.</li>
-            <li>📌 Следующий этап: создание Telegram-бота и AI-ассистента (параллельно с веб-проектом).</li>
-        </ul>
-    </div>
-
-    <div class="box" id="section11">
-        <h2>11. Карьерный трек: LinkedIn, портфолио, поиск работы</h2>
-        <ul>
-            <li>Создать профиль на LinkedIn (планируется после завершения Stacked).</li>
-            <li>Использовать profile.html как онлайн-портфолио.</li>
-            <li>Подписаться на рекрутеров, выкладывать посты о проектах.</li>
-            <li>Начать отклики на вакансии (Upwork, hh.by, LinkedIn).</li>
-        </ul>
-    </div>
-
-    <div class="box" id="section12">
-        <h2>12. Ближайшие шаги</h2>
-        <ol>
-            <li>Завершить разбор Clean Architecture Template.</li>
-            <li>Создать контроллеры для постов в Stacked.</li>
-            <li>Настроить EF Core (SQLite).</li>
-            <li>Разработать Telegram-бота.</li>
-            <li>Добавить AI-ассистента (Semantic Kernel).</li>
-        </ol>
-    </div>
-
-    <div class="box" id="section13">
-        <h2>13. История версий</h2>
-        <ul>
-            <li><strong>v2.0 – v2.16</strong> – предыдущие промежуточные версии.</li>
-            <li><strong>v3.0 (22 марта 2026):</strong> Обновлённый роадмап с акцентом на карьеру, добавлены ссылки на другие страницы проекта.</li>
-        </ul>
-    </div>
-
-    <div class="footer strict" id="section14">
-        <p>🔥 <strong>Тренер говорит:</strong> Ты прошёл огромный путь. Теперь у тебя есть не только технические навыки, но и полноценное портфолио. LinkedIn и отклики на вакансии станут следующим рубежом. Не откладывай – начни прямо сегодня. Ты уже готов брать первые заказы.</p>
-        <p>📆 Не забывай: отчёты за неделю, месяц и весь срок обязательны. Синхронизируй LinkedIn с GitHub и продолжай кодить.</p>
-    </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked – Проекты и роадмап</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f1f5f9;
+            color: #0f172a;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .nav-bar {
+            background: #0f172a;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.1);
+        }
+        .nav-bar a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+        .nav-bar a:hover {
+            background: #1e293b;
+            color: white;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+        .subtitle {
+            color: #334155;
+            margin-bottom: 2rem;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+        }
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+        .card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.75rem 0;
+        }
+        .tech span {
+            background: #eef2ff;
+            color: #1e40af;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        .links {
+            margin-top: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #3b82f6;
+            color: #3b82f6;
+        }
+        .btn-outline:hover {
+            background: #eff6ff;
+        }
+        .btn:hover {
+            background: #2563eb;
+        }
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            color: #475569;
+            font-size: 0.8rem;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <a href="index.html">🏠 Главная</a>
+        <a href="roadmap.html">📘 Роадмап</a>
+        <a href="profile.html">👤 Профиль</a>
+        <a href="projects.html">📁 Проекты</a>
+        <a href="resume.html">📄 Резюме</a>
+        <a href="detailed-plan.html">📅 Детальный план</a>
+        <a href="notes.html">📝 Заметки</a>
+    </div>
+
+    <h1>📁 Stacked – Проекты и связь с роадмапом</h1>
+    <div class="subtitle">Три ключевых проекта профиля и их соответствие этапам обучения</div>
+
+    <div class="card">
+        <h2>📟 BlogConsole <span style="font-size:0.7rem; background:#dcfce7; padding:0.2rem 0.6rem; border-radius:20px; color:#166534;">активный</span></h2>
+        <div class="tech">
+            <span>C#</span><span>.NET 8</span><span>JSON</span><span>Repository pattern</span><span>LINQ</span><span>Git</span>
+        </div>
+        <p>Консольное приложение для управления постами блога. Полный CRUD, сохранение в JSON, чистая архитектура (интерфейсы, репозиторий). Фундамент для всех будущих проектов.</p>
+        <div class="links">
+            <a href="https://github.com/siarheitsypko-stacked/stacked-plan/tree/main/BlogConsole" class="btn" target="_blank">GitHub</a>
+        </div>
+        <hr style="margin: 1rem 0;">
+        <p><strong>🔧 Составляющие роадмапа:</strong></p>
+        <ul style="margin-left: 1.5rem; color:#334155;">
+            <li>Основы C# (переменные, циклы, условия) – неделя 1</li>
+            <li>ООП: классы, методы, интерфейсы, статика – неделя 2</li>
+            <li>Коллекции (List, Dictionary), LINQ – неделя 2–3</li>
+            <li>Работа с файлами (JSON, Stream) – неделя 3</li>
+            <li>Исключения, обработка ошибок – неделя 3</li>
+            <li>Первый репозиторий, коммиты, Git – день 1–2</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>⚙️ Stacked API <span style="font-size:0.7rem; background:#fff3cd; padding:0.2rem 0.6rem; border-radius:20px; color:#856404;">в процессе</span></h2>
+        <div class="tech">
+            <span>ASP.NET Core</span><span>Clean Architecture</span><span>CQRS</span><span>EF Core</span><span>PostgreSQL</span><span>Swagger</span>
+        </div>
+        <p>Веб-API для блог-платформы. Слои: Domain, Application, Infrastructure, Web. Используется CQRS (MediatR), FluentValidation. В будущем — клиент на React и интеграция с GitHub API.</p>
+        <div class="links">
+            <a href="https://github.com/siarheitsypko-stacked/stacked-plan" class="btn btn-outline" target="_blank">Репозиторий (план)</a>
+            <a href="https://siarheitsypko-stacked.github.io/stacked-plan/profile.html" class="btn btn-outline" target="_blank">В профиле</a>
+        </div>
+        <hr style="margin: 1rem 0;">
+        <p><strong>🔧 Составляющие роадмапа:</strong></p>
+        <ul style="margin-left: 1.5rem; color:#334155;">
+            <li>Entity Framework Core, миграции, SQLite/PostgreSQL – месяц 1, неделя 3</li>
+            <li>Web API: контроллеры, маршрутизация, DI – месяц 1, неделя 3–4</li>
+            <li>JWT аутентификация, роли – месяц 2, неделя 8</li>
+            <li>GitHub API интеграция – месяц 3, неделя 9</li>
+            <li>React + TypeScript фронтенд – месяц 2, недели 5–8</li>
+            <li>Docker, CI/CD – месяц 4, неделя 13</li>
+            <li>Azure, деплой – месяц 4, неделя 14</li>
+            <li>Тестирование (xUnit, интеграционные тесты) – месяц 4, неделя 15</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🤖 Telegram‑бот (AI assistant) <span style="font-size:0.7rem; background:#fff3cd; padding:0.2rem 0.6rem; border-radius:20px; color:#856404;">в разработке</span></h2>
+        <div class="tech">
+            <span>C#</span><span>Telegram.Bot</span><span>AI (Semantic Kernel)</span><span>Ollama</span><span>DeepSeek-R1</span><span>Docker</span>
+        </div>
+        <p>Ассистент для работы с блогом через Telegram. Создание/просмотр постов, интеграция с локальной AI‑моделью. Демонстрирует навыки интеграции с внешними API и гибридных AI‑сценариев.</p>
+        <div class="links">
+            <a href="https://siarheitsypko-stacked.github.io/stacked-plan/profile.html" class="btn btn-outline" target="_blank">В профиле</a>
+        </div>
+        <hr style="margin: 1rem 0;">
+        <p><strong>🔧 Составляющие роадмапа:</strong></p>
+        <ul style="margin-left: 1.5rem; color:#334155;">
+            <li>AI‑ассистент (локальный DeepSeek‑R1) – месяц 3, неделя 11</li>
+            <li>Telegram‑бот на C# – месяц 3, неделя 12</li>
+            <li>Интеграция AI в бот – месяц 3, неделя 12</li>
+            <li>Docker, деплой бота – месяц 4, неделя 13</li>
+            <li>Логирование, мониторинг – месяц 4, неделя 14</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🔗 Как всё связано</h2>
+        <ul style="margin-left: 1.5rem;">
+            <li><strong>BlogConsole</strong> – фундамент C# и первое знакомство с кодом.</li>
+            <li><strong>Stacked API</strong> – профессиональный бэкенд, интеграции, архитектура.</li>
+            <li><strong>Telegram‑бот + AI</strong> – демонстрация AI‑сценариев и работы с внешними интерфейсами.</li>
+            <li>Все дополнительные этапы роадмапа (GitHub API, React, Docker, Azure, фриланс-модули) либо уже встроены в эти три проекта, либо являются их естественным продолжением.</li>
+        </ul>
+        <p style="margin-top: 1rem;">✅ Подробная связь каждого этапа обучения с проектами описана в <a href="roadmap.html">роадмапе</a> и <a href="profile.html">профиле разработчика</a>.</p>
+    </div>
+
+    <div class="footer">
+        Все проекты соответствуют этапам роадмапа Stacked и являются основой для профессионального портфолио.<br>
+        GitHub: <a href="https://github.com/siarheitsypko-stacked/stacked-plan" target="_blank">siarheitsypko-stacked/stacked-plan</a>
+    </div>
+</div>
+</body>
+</html>

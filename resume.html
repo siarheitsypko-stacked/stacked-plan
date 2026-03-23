@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сергей — C# / .NET Developer | Резюме</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #e9eef3;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            color: #1e2a3e;
+            padding: 2rem 1rem;
+        }
+        .resume {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .nav-bar {
+            background: #0f172a;
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .nav-bar a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+        .nav-bar a:hover {
+            background: #1e293b;
+            color: white;
+        }
+        .header {
+            background: #0f172a;
+            color: white;
+            padding: 2rem 2rem 1.5rem 2rem;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        .header .title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #94a3b8;
+            margin-bottom: 1rem;
+        }
+        .header .location {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            margin-top: 0.5rem;
+        }
+        .body {
+            padding: 2rem;
+        }
+        .two-columns {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .left {
+            flex: 1.2;
+            min-width: 220px;
+        }
+        .right {
+            flex: 2.5;
+            min-width: 260px;
+        }
+        .section {
+            margin-bottom: 1.8rem;
+        }
+        .section h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #0f172a;
+            border-left: 4px solid #3b82f6;
+            padding-left: 0.8rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.2px;
+        }
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.6rem;
+            font-size: 0.9rem;
+            color: #2c3e50;
+        }
+        .skill-tag {
+            background: #eef2ff;
+            color: #1e40af;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: inline-block;
+            margin: 0.2rem 0.25rem;
+        }
+        .project-item, .education-item {
+            margin-bottom: 1.3rem;
+        }
+        .project-title, .edu-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #0f172a;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.2rem;
+        }
+        .project-tech {
+            font-size: 0.75rem;
+            font-weight: normal;
+            color: #3b82f6;
+            background: #eef2ff;
+            padding: 0.1rem 0.6rem;
+            border-radius: 20px;
+        }
+        .project-desc {
+            font-size: 0.88rem;
+            color: #2c3e50;
+            margin-top: 0.3rem;
+            margin-bottom: 0.3rem;
+        }
+        .project-links {
+            margin-top: 0.4rem;
+        }
+        .project-links a {
+            font-size: 0.75rem;
+            background: #f1f5f9;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #2563eb;
+            margin-right: 0.6rem;
+            display: inline-block;
+        }
+        .project-links a:hover {
+            background: #e2e8f0;
+        }
+        .btn-pdf {
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            color: #1e293b;
+            transition: 0.2s;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        .btn-pdf:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+        footer {
+            background: #f8fafc;
+            text-align: center;
+            font-size: 0.7rem;
+            padding: 1rem;
+            color: #475569;
+            border-top: 1px solid #e2e8f0;
+        }
+        @media (max-width: 700px) {
+            .body { padding: 1.5rem; }
+            .header { padding: 1.5rem; }
+            .header h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="resume">
+    <div class="nav-bar">
+        <a href="index.html">🏠 Главная</a>
+        <a href="roadmap.html">📘 Роадмап</a>
+        <a href="profile.html">👤 Профиль</a>
+        <a href="projects.html">📁 Проекты</a>
+        <a href="resume.html">📄 Резюме</a>
+        <a href="detailed-plan.html">📅 Детальный план</a>
+        <a href="notes.html">📝 Заметки</a>
+    </div>
+    <div style="padding: 1rem 2rem 0 2rem; text-align: right;">
+        <button class="btn-pdf" id="printPdfBtn">📄 Сохранить как PDF / Распечатать</button>
+    </div>
+    <div class="header">
+        <h1>Сергей</h1>
+        <div class="title">C# / .NET Developer | Инженер-системотехник</div>
+        <div class="location">
+            <span>📍 Беларусь, Минск</span>
+            <span>🌍 Открыт к удалённой работе и релокации</span>
+        </div>
+    </div>
+
+    <div class="body">
+        <div class="two-columns">
+            <div class="left">
+                <div class="section">
+                    <h2>Контакты</h2>
+                    <div class="contact-info">
+                        <p>📧 <a href="mailto:snowleopardstb@gmail.com" style="color:#2563eb; text-decoration:none;">snowleopardstb@gmail.com</a></p>
+                        <p>💻 GitHub: <a href="https://github.com/siarheitsypko-stacked" target="_blank" style="color:#2563eb;">siarheitsypko-stacked</a></p>
+                        <p>📱 Telegram: @Luter (по запросу)</p>
+                        <p>🔗 <a href="https://siarheitsypko-stacked.github.io/stacked-plan/profile.html" target="_blank" style="color:#2563eb;">Профиль разработчика</a></p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Технический стек</h2>
+                    <div>
+                        <span class="skill-tag">C# / .NET 8/9</span>
+                        <span class="skill-tag">ASP.NET Core Web API</span>
+                        <span class="skill-tag">Entity Framework Core</span>
+                        <span class="skill-tag">SQL (PostgreSQL, SQLite)</span>
+                        <span class="skill-tag">REST API / Swagger</span>
+                        <span class="skill-tag">Clean Architecture / CQRS</span>
+                        <span class="skill-tag">MediatR / FluentValidation</span>
+                        <span class="skill-tag">React / TypeScript (основы)</span>
+                        <span class="skill-tag">Git / GitHub Actions (CI/CD)</span>
+                        <span class="skill-tag">Docker / docker-compose</span>
+                        <span class="skill-tag">Telegram Bot API</span>
+                        <span class="skill-tag">Ollama / DeepSeek‑R1 (AI)</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Языки</h2>
+                    <p><strong>Русский</strong> — родной</p>
+                    <p><strong>Английский</strong> — Intermediate+ (технический английский, чтение документации, переписка)</p>
+                    <div class="lang-level">Активно развиваю технический английский, готов к работе в международной среде.</div>
+                </div>
+
+                <div class="section">
+                    <h2>Образование</h2>
+                    <div class="education-item">
+                        <div class="project-title">Высшее инженерное образование <span style="font-size:0.7rem; background:#e2e8f0; padding:0.1rem 0.5rem; border-radius:16px;">диплом</span></div>
+                        <div class="project-desc">Системотехника, структурный анализ, управление сложными проектами. Инженерный подход к разработке ПО: чистая архитектура, тестируемость, масштабируемость.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="section">
+                    <h2>О себе</h2>
+                    <p>Начинающий C#/.NET разработчик с инженерным мышлением. Строю pet‑проект полного цикла (Fullstack) для портфолио. Цель — работа на себя (фриланс, международные контракты) или релокация в IT‑компанию. Готов к стажировке, активному обучению и выполнению реальных задач. Инженерная дисциплина помогает быстро осваивать новые технологии и поддерживать высокое качество кода.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Пет-проекты (ключевые)</h2>
+
+                    <div class="project-item">
+                        <div class="project-title">
+                            📟 BlogConsole 
+                            <span class="project-tech">C# · .NET 8 · JSON · Repository pattern</span>
+                        </div>
+                        <div class="project-desc">Консольное приложение для управления постами блога. Полный CRUD, сохранение в JSON, чистая архитектура (интерфейсы, репозиторий). Реализованы валидация, работа с файлами, LINQ, обработка исключений.</div>
+                        <div class="project-links">
+                            <a href="https://github.com/siarheitsypko-stacked/stacked-plan/tree/main/BlogConsole" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">
+                            ⚙️ Stacked API (Web API) 
+                            <span class="project-tech">ASP.NET Core · Clean Architecture · CQRS · EF Core · PostgreSQL</span>
+                        </div>
+                        <div class="project-desc">Веб-API для блог-платформы. Построено на принципах Clean Architecture (слои Domain, Application, Infrastructure, Web). Используется CQRS (MediatR), FluentValidation, Entity Framework Core. В планах — интеграция с GitHub API, аутентификация JWT, клиент на React + TypeScript.</div>
+                        <div class="project-links">
+                            <a href="https://github.com/siarheitsypko-stacked/stacked-plan" target="_blank">Репозиторий (план)</a>
+                            <a href="https://siarheitsypko-stacked.github.io/stacked-plan/profile.html" target="_blank">Профиль проекта</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">
+                            🤖 Telegram‑бот (AI assistant) 
+                            <span class="project-tech">C# · Telegram.Bot · AI (Semantic Kernel) · Ollama · DeepSeek‑R1</span>
+                        </div>
+                        <div class="project-desc">Ассистент для работы с блогом через Telegram: создание/просмотр постов, интеграция с локальной AI‑моделью (DeepSeek‑R1). Демонстрирует навыки интеграции с внешними API, асинхронную обработку, гибридные AI‑сценарии.</div>
+                        <div class="project-links">
+                            <span style="font-size:0.7rem; background:#eef2ff; padding:0.2rem 0.6rem; border-radius:16px;">в активной разработке</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Дополнительные навыки и инструменты</h2>
+                    <div>
+                        <span class="skill-tag">Git / GitHub</span>
+                        <span class="skill-tag">Docker / docker-compose</span>
+                        <span class="skill-tag">GitHub Actions (CI/CD)</span>
+                        <span class="skill-tag">Azure (App Services, SQL)</span>
+                        <span class="skill-tag">Swagger / Postman</span>
+                        <span class="skill-tag">VS 2022 / VS Code</span>
+                        <span class="skill-tag">Linux (Ubuntu) базовые навыки</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Карьерные ожидания</h2>
+                    <p>Готов рассматривать <strong>удалённую работу (фриланс)</strong>, <strong>аутстафф-проекты</strong> и официальное трудоустройство (стажировка / junior) с возможностью релокации. Интересны задачи на C# / .NET, разработка API, интеграции, а также участие в opensource. Открыт для предложений, быстро обучаюсь, имею чёткий план развития и наставника.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Разрешаю использование этого резюме для связи со мной по любым каналам, указанным выше.<br>
+        Актуальная версия всегда доступна на GitHub Pages.
+    </footer>
+</div>
+<script>
+    const printBtn = document.getElementById('printPdfBtn');
+    if (printBtn) {
+        printBtn.addEventListener('click', () => {
+            window.print();
+        });
+    }
+</script>
+</body>
+</html>

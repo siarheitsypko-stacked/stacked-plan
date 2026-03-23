@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked – Заметки и ресурсы</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f5f7fb;
+            color: #1e293b;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .nav-bar {
+            background: #0f172a;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.1);
+        }
+        .nav-bar a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+        .nav-bar a:hover {
+            background: #1e293b;
+            color: white;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+        .subtitle {
+            color: #334155;
+            margin-bottom: 2rem;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+        }
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+        .card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .resource-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .resource-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        .resource-list li:before {
+            content: "📌";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+        }
+        .code-block {
+            background: #f1f5f9;
+            padding: 0.8rem;
+            border-radius: 0.8rem;
+            font-family: monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            margin-top: 0.5rem;
+        }
+        .glossary {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 0.8rem;
+        }
+        .glossary-item {
+            background: #f8fafc;
+            padding: 0.5rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+        }
+        .glossary-term {
+            font-weight: 600;
+            color: #0f172a;
+        }
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            color: #475569;
+            font-size: 0.8rem;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <a href="index.html">🏠 Главная</a>
+        <a href="roadmap.html">📘 Роадмап</a>
+        <a href="profile.html">👤 Профиль</a>
+        <a href="projects.html">📁 Проекты</a>
+        <a href="resume.html">📄 Резюме</a>
+        <a href="detailed-plan.html">📅 Детальный план</a>
+        <a href="notes.html">📝 Заметки</a>
+    </div>
+
+    <h1>📝 Stacked – Заметки и полезные ресурсы</h1>
+    <div class="subtitle">Ссылки, глоссарий, технический английский и вспомогательные материалы для обучения</div>
+
+    <!-- Основные ресурсы -->
+    <div class="card">
+        <h2>📚 Основные ресурсы обучения</h2>
+        <ul class="resource-list">
+            <li><strong>Михаил Русаков</strong> – «C# с нуля до гуру» (основной курс, практика).</li>
+            <li><strong>Эндрю Троелсен</strong> – «C# 7 и .NET Core» (8-е издание, чтение в метро 30 мин/день).</li>
+            <li><strong>Сергей Дмитриевский</strong> – «Профессия Frontend-разработчик + ИИ» (используем выборочно с TypeScript).</li>
+            <li><strong>Metanit</strong> – быстрый справочник по C# и .NET.</li>
+            <li><strong>learn.microsoft.com</strong> – официальная документация Microsoft.</li>
+            <li><strong>CodeBlog (YouTube)</strong> – русскоязычный канал по C#.</li>
+            <li><strong>Сачков Dev (YouTube)</strong> – полезные уроки по C# и .NET.</li>
+            <li><strong>Codewars</strong> – задачи для тренировки алгоритмического мышления (с 3-4 недели).</li>
+        </ul>
+    </div>
+
+    <!-- Технический английский (глоссарий) -->
+    <div class="card">
+        <h2>📖 Технический английский – базовый глоссарий</h2>
+        <div class="glossary">
+            <div class="glossary-item"><span class="glossary-term">string</span> – строка</div>
+            <div class="glossary-item"><span class="glossary-term">int</span> – целое число</div>
+            <div class="glossary-item"><span class="glossary-term">double</span> – число с плавающей точкой</div>
+            <div class="glossary-item"><span class="glossary-term">bool</span> – логический тип</div>
+            <div class="glossary-item"><span class="glossary-term">if / else</span> – условие</div>
+            <div class="glossary-item"><span class="glossary-term">switch / case</span> – множественный выбор</div>
+            <div class="glossary-item"><span class="glossary-term">while / for</span> – циклы</div>
+            <div class="glossary-item"><span class="glossary-term">array</span> – массив</div>
+            <div class="glossary-item"><span class="glossary-term">List&lt;T&gt;</span> – список</div>
+            <div class="glossary-item"><span class="glossary-term">class / object</span> – класс / объект</div>
+            <div class="glossary-item"><span class="glossary-term">method</span> – метод</div>
+            <div class="glossary-item"><span class="glossary-term">property</span> – свойство</div>
+            <div class="glossary-item"><span class="glossary-term">interface</span> – интерфейс</div>
+            <div class="glossary-item"><span class="glossary-term">repository</span> – репозиторий</div>
+            <div class="glossary-item"><span class="glossary-term">dependency injection</span> – внедрение зависимостей</div>
+            <div class="glossary-item"><span class="glossary-term">commit / push / pull</span> – операции Git</div>
+        </div>
+        <p style="margin-top: 1rem;">*Глоссарий пополняется по мере изучения новых тем.</p>
+    </div>
+
+    <!-- Полезные ссылки -->
+    <div class="card">
+        <h2>🔗 Полезные ссылки</h2>
+        <ul class="resource-list">
+            <li><a href="https://github.com/siarheitsypko-stacked/stacked-plan" target="_blank">GitHub репозиторий Stacked</a></li>
+            <li><a href="https://siarheitsypko-stacked.github.io/stacked-plan/index.html" target="_blank">Главная страница проекта</a></li>
+            <li><a href="https://siarheitsypko-stacked.github.io/stacked-plan/profile.html" target="_blank">Профиль разработчика</a></li>
+            <li><a href="https://github.com/volkomorov2001/bored-app.v1" target="_blank">Bored App (ознакомление с фронтендом)</a></li>
+            <li><a href="https://learn.microsoft.com/ru-ru/dotnet/csharp/" target="_blank">Документация C# (Microsoft)</a></li>
+            <li><a href="https://metanit.com/sharp/" target="_blank">Metanit – учебник по C#</a></li>
+            <li><a href="https://www.codewars.com/" target="_blank">Codewars – задачи по программированию</a></li>
+            <li><a href="https://habr.com/ru/hub/csharp/" target="_blank">Хабр – статьи по C# и .NET</a></li>
+        </ul>
+    </div>
+
+    <!-- Книги и углублённое чтение -->
+    <div class="card">
+        <h2>📚 Книги для углублённого изучения (отложены до 3-4 месяца)</h2>
+        <ul class="resource-list">
+            <li>Джеффри Рихтер – «CLR via C#»</li>
+            <li>Джон Скит – «C# для профессионалов»</li>
+            <li>Герберт Шилдт – «C# 4.0: полное руководство» (справочно)</li>
+            <li>Стив Макконнелл – «Совершенный код»</li>
+            <li>Тепляков, Шевчук – паттерны проектирования (после завершения проекта)</li>
+        </ul>
+    </div>
+
+    <!-- Инструменты и настройки -->
+    <div class="card">
+        <h2>🛠️ Инструменты разработки</h2>
+        <ul class="resource-list">
+            <li><strong>IDE:</strong> Visual Studio Community 2026 (основная), VS Code (для фронтенда)</li>
+            <li><strong>Git:</strong> версия 2.53.0, GitHub Desktop для удобства</li>
+            <li><strong>.NET SDK:</strong> 8.0 (LTS) и 10.0 (для совместимости)</li>
+            <li><strong>Docker Desktop</strong> – для контейнеризации (будет использоваться на 4-м месяце)</li>
+            <li><strong>Ollama + DeepSeek-R1</strong> – локальный AI-ассистент (для проекта и обучения)</li>
+        </ul>
+    </div>
+
+    <!-- Ежедневные напоминания -->
+    <div class="card">
+        <h2>⏰ Ежедневный ритуал (напоминалка)</h2>
+        <ul class="resource-list">
+            <li>📖 30 минут Троелсена в метро.</li>
+            <li>🎯 Утром: определить цель дня (из детального плана или роадмапа).</li>
+            <li>💻 Основная работа: теория (Русаков) + практика (BlogConsole / API).</li>
+            <li>🌙 Вечером: отчёт «день X итог» (что сделано, трудности, долги).</li>
+            <li>📝 Коммиты и пуш на GitHub – ежедневно.</li>
+            <li>📚 Английские термины – учить по 5-10 слов в день.</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        Заметки обновляются по мере появления новых ресурсов и уточнений.<br>
+        GitHub: <a href="https://github.com/siarheitsypko-stacked/stacked-plan" target="_blank">siarheitsypko-stacked/stacked-plan</a>
+    </div>
+</div>
+</body>
+</html>

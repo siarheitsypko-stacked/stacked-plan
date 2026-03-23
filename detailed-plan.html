@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked – Детальный план обучения (112 дней)</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.5; max-width: 1200px; margin: 20px auto; padding: 0 20px; background: #f9f9f9; }
+        h1, h2, h3 { color: #1e293b; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        th, td { border: 1px solid #e2e8f0; padding: 10px; text-align: left; vertical-align: top; }
+        th { background-color: #f1f5f9; font-weight: 600; }
+        code { background: #eef2ff; padding: 2px 5px; border-radius: 4px; font-size: 0.85rem; }
+        .box { background: white; padding: 20px; margin: 20px 0; border-radius: 12px; box-shadow: 0 4px 6px -2px rgba(0,0,0,0.05); }
+        .nav-bar {
+            background: #0f172a;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.1);
+        }
+        .nav-bar a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+        .nav-bar a:hover {
+            background: #1e293b;
+            color: white;
+        }
+        .week-block { margin-bottom: 2rem; }
+        .week-title { background: #eef2ff; padding: 0.5rem 1rem; border-radius: 30px; display: inline-block; margin-bottom: 1rem; font-weight: 600; }
+        .footer { margin-top: 2rem; text-align: center; font-size: 0.8rem; color: #475569; border-top: 1px solid #e2e8f0; padding-top: 1.5rem; }
+    </style>
+</head>
+<body>
+<div class="nav-bar">
+    <a href="index.html">🏠 Главная</a>
+    <a href="roadmap.html">📘 Роадмап</a>
+    <a href="profile.html">👤 Профиль</a>
+    <a href="projects.html">📁 Проекты</a>
+    <a href="resume.html">📄 Резюме</a>
+    <a href="detailed-plan.html">📅 Детальный план</a>
+    <a href="notes.html">📝 Заметки</a>
+</div>
+
+<h1>📅 Stacked – Детальный план обучения (112 дней)</h1>
+<p>План является предварительным и может корректироваться по ходу обучения. Каждый день включает теорию, практику, коммит и английские термины. Сгруппировано по неделям.</p>
+
+<!-- Неделя 1 -->
+<div class="week-block">
+    <div class="week-title">Неделя 1: Основы C# (дни 1–7)</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Git / Английский</th></thead>
+        <tbody>
+            <tr><td>1</td><td>Установка ПО, первая программа</td><td>Hello, USA! (консоль)</td><td>git init, first commit / repository, commit</td></tr>
+            <tr><td>2</td><td>Русаков 2.5–2.7 (строки, логика, преобразования)</td><td>Ввод/валидация поста (длина, пустота)</td><td>feat: add post input validation / string, length, if, else</td></tr>
+            <tr><td>3</td><td>Русаков 2.8–2.9 (switch-case)</td><td>Меню с while и switch</td><td>feat: add menu with switch / switch, case, while</td></tr>
+            <tr><td>4</td><td>Русаков 2.10–2.12 (циклы, массивы)</td><td>Хранение постов в массиве, вывод списка</td><td>feat: store posts in array / for, array, foreach</td></tr>
+            <tr><td>5</td><td>Русаков 3.1–3.3 (классы, методы)</td><td>Класс Post (поля, метод Display)</td><td>feat: add Post class / class, method, property</td></tr>
+            <tr><td>6</td><td>Русаков 3.4–3.5 (модификаторы, static)</td><td>BlogManager с методами (Add, Show)</td><td>feat: BlogManager with methods / public, private, static</td></tr>
+            <tr><td>7</td><td>Русаков 3.6–3.7 (перечисления)</td><td>Статус поста (Draft/Published)</td><td>feat: add post status enum / enum</td></tr>
+        </tbody>
+    </table>
+    <p><em>Итог недели: консольное приложение с меню, хранением в массиве, классом Post и перечислением статуса.</em></p>
+</div>
+
+<!-- Неделя 2 -->
+<div class="week-block">
+    <div class="week-title">Неделя 2: ООП (продолжение), коллекции (дни 8–14)</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Git / Английский</th></thead>
+        <tbody>
+            <tr><td>8</td><td>Русаков 3.8–3.10 (наследование)</td><td>Базовый класс Entity (Id, CreatedAt)</td><td>feat: base Entity class / inheritance, base</td></tr>
+            <tr><td>9</td><td>Русаков 3.11–3.12 (интерфейсы)</td><td>Интерфейс IRepository</td><td>feat: IRepository interface / interface</td></tr>
+            <tr><td>10</td><td>Русаков 3.13–3.15 (обобщения)</td><td>Обобщённый репозиторий Repository&lt;T&gt;</td><td>feat: generic repository / generic, where</td></tr>
+            <tr><td>11</td><td>Русаков 4.1–4.3 (исключения)</td><td>Обработка ошибок в репозитории</td><td>feat: exception handling / try, catch, finally</td></tr>
+            <tr><td>12</td><td>Русаков 5.1–5.4 (DateTime, Dictionary)</td><td>Добавление тегов (Dictionary)</td><td>feat: tags dictionary / DateTime, Dictionary, KeyValuePair</td></tr>
+            <tr><td>13</td><td>Русаков 5.8–5.9 (файлы) – опционально</td><td>Сохранение/загрузка постов в JSON</td><td>feat: save/load posts to file / File, Stream, JSON</td></tr>
+            <tr><td>14</td><td>Повторение, рефакторинг</td><td>Чистка кода, комментарии XML</td><td>refactor: code cleanup / summary, comments</td></tr>
+        </tbody>
+    </table>
+    <p><em>Итог недели: полноценная архитектура с наследованием, интерфейсами, обобщениями, обработкой исключений, сохранением в файл.</em></p>
+</div>
+
+<!-- Неделя 3 -->
+<div class="week-block">
+    <div class="week-title">Неделя 3: Базы данных, EF Core, Web API (дни 15–21)</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Git / Английский</th></thead>
+        <tbody>
+            <tr><td>15</td><td>EF Core – установка, настройка, SQLite</td><td>Создание AppDbContext, модель Post (с аннотациями)</td><td>feat: add EF Core and Post entity / DbContext, DbSet</td></tr>
+            <tr><td>16</td><td>Миграции (Add-Migration, Update-Database)</td><td>Создание и применение миграции</td><td>feat: initial migration / migration, update-database</td></tr>
+            <tr><td>17</td><td>CRUD через EF Core (LINQ)</td><td>Репозиторий PostRepository с методами</td><td>feat: PostRepository CRUD / FirstOrDefault, ToList</td></tr>
+            <tr><td>18</td><td>ASP.NET Core Web API – контроллеры</td><td>PostsController, методы GET</td><td>feat: PostsController GET / controller, action, route</td></tr>
+            <tr><td>19</td><td>HTTP методы POST, PUT, DELETE</td><td>Добавление Create, Update, Delete</td><td>feat: POST, PUT, DELETE / FromBody, ActionResult</td></tr>
+            <tr><td>20</td><td>Тестирование API (Swagger, Postman)</td><td>Проверка эндпоинтов, отладка</td><td>test: API tested / Swagger, Postman</td></tr>
+            <tr><td>21</td><td>Резервный день / доработка</td><td>Валидация, обработка ошибок</td><td>feat: add validation and error handling / FluentValidation</td></tr>
+        </tbody>
+    </table>
+    <p><em>Итог недели: полноценное Web API с подключением к БД (SQLite), поддержка CRUD.</em></p>
+</div>
+
+<!-- Неделя 4 -->
+<div class="week-block">
+    <div class="week-title">Неделя 4: GitHub API, подготовка к фронтенду (дни 22–28)</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Git / Английский</th></thead>
+        <tbody>
+            <tr><td>22</td><td>GitHub API (Octokit) – получение репозиториев</td><td>Консольное приложение для получения списка репозиториев</td><td>feat: github api console demo / Octokit, GitHubClient</td></tr>
+            <tr><td>23</td><td>Интеграция GitHub API в проект</td><td>GitHubController, эндпоинт /api/github/repos</td><td>feat: GitHubController / HttpClient, JSON</td></tr>
+            <tr><td>24</td><td>Кеширование данных GitHub в БД</td><td>Фоновый сервис (IHostedService) для обновления</td><td>feat: background service for GitHub cache / IHostedService</td></tr>
+            <tr><td>25</td><td>Основы HTML/CSS</td><td>Создание простого HTML-файла с карточками постов</td><td>chore: basic HTML layout / div, class, style</td></tr>
+            <tr><td>26</td><td>Основы JavaScript</td><td>Скрипт для динамической загрузки постов (fetch)</td><td>feat: vanilla JS fetch posts / fetch, promise</td></tr>
+            <tr><td>27</td><td>Введение в TypeScript</td><td>Переписывание скрипта на TypeScript, настройка tsc</td><td>refactor: convert to TypeScript / interface, tsc</td></tr>
+            <tr><td>28</td><td>Резервный день / TypeScript</td><td>Углубление: типы, union, generics</td><td>feat: advanced TypeScript / union, generic</td></tr>
+        </tbody>
+    </table>
+    <p><em>Итог недели: интеграция с GitHub API, фоновое обновление, знакомство с HTML/CSS/JS/TS.</em></p>
+</div>
+
+<!-- Неделя 5 (дни 29–35) -->
+<div class="week-block">
+    <div class="week-title">Неделя 5: HTML/CSS, JS, TypeScript (углублённо) – дни 29–35</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Git / Английский</th></thead>
+        <tbody>
+            <tr><td>29</td><td>HTML теги, структура страницы</td><td>Создание каркаса блога (header, main, footer)</td><td>feat: HTML skeleton</td></tr>
+            <tr><td>30</td><td>CSS основы, селекторы, цвета, шрифты</td><td>Стилизация каркаса</td><td>feat: basic CSS styles</td></tr>
+            <tr><td>31</td><td>Flexbox и Grid</td><td>Верстка карточек постов</td><td>feat: post cards layout</td></tr>
+            <tr><td>32</td><td>JavaScript переменные, типы, функции</td><td>Переключение темы (светлая/темная) через JS</td><td>feat: theme switcher with JS</td></tr>
+            <tr><td>33</td><td>JavaScript DOM манипуляции</td><td>Динамическое создание карточек из массива</td><td>feat: dynamic cards from array</td></tr>
+            <tr><td>34</td><td>TypeScript – типы, интерфейсы</td><td>Переписать динамические карточки на TS, добавить интерфейс Post</td><td>refactor: TS with interface</td></tr>
+            <tr><td>35</td><td>Резервный день / повторение</td><td>Исправление ошибок, улучшение</td><td>fix: various improvements</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Неделя 6 (дни 36–42) -->
+<div class="week-block">
+    <div class="week-title">Неделя 6: React базовый с TypeScript (дни 36–42)</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Git / Английский</th></thead>
+        <tbody>
+            <tr><td>36</td><td>Введение в React, компоненты, JSX</td><td>Создание React-приложения (Vite), компонент App</td><td>feat: init React app</td></tr>
+            <tr><td>37</td><td>Компоненты-функции, props</td><td>Компонент PostCard, передача пропсов</td><td>feat: PostCard component</td></tr>
+            <tr><td>38</td><td>useState</td><td>Состояние для списка постов (тестовые данные)</td><td>feat: useState for posts</td></tr>
+            <tr><td>39</td><td>useEffect, работа с API</td><td>Загрузка постов с бэкенда (fetch)</td><td>feat: fetch posts with useEffect</td></tr>
+            <tr><td>40</td><td>React Router</td><td>Страница отдельного поста</td><td>feat: add routing</td></tr>
+            <tr><td>41</td><td>Формы и управляемые компоненты</td><td>Форма добавления поста (админка)</td><td>feat: add post form</td></tr>
+            <tr><td>42</td><td>Резервный день / стилизация</td><td>Подключение Tailwind / CSS modules</td><td>style: add Tailwind</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Неделя 7 (дни 43–49) -->
+<div class="week-block">
+    <div class="week-title">Неделя 7: React продвинутый (Redux) – дни 43–49</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Git / Английский</th></thead>
+        <tbody>
+            <tr><td>43</td><td>Redux Toolkit – установка, store, slices</td><td>Создание slice для постов</td><td>feat: redux store for posts</td></tr>
+            <tr><td>44</td><td>useSelector, useDispatch</td><td>Замена локального состояния на Redux</td><td>feat: use Redux in components</td></tr>
+            <tr><td>45</td><td>Асинхронные действия (createAsyncThunk)</td><td>Загрузка постов с API через thunk</td><td>feat: async thunk for posts</td></tr>
+            <tr><td>46</td><td>Работа с формами в Redux</td><td>Интеграция формы добавления с Redux</td><td>feat: add post via Redux</td></tr>
+            <tr><td>47</td><td>Оптимизация (memo, useCallback)</td><td>Применение к компонентам</td><td>perf: memo and callbacks</td></tr>
+            <tr><td>48</td><td>Тестирование React (RTL)</td><td>Простые тесты для PostCard</td><td>test: add component tests</td></tr>
+            <tr><td>49</td><td>Резервный день / доработка</td><td>Исправление багов, рефакторинг</td><td>refactor: improve code</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Неделя 8 (дни 50–56) -->
+<div class="week-block">
+    <div class="week-title">Неделя 8: Интеграция с API, аутентификация (дни 50–56)</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Git / Английский</th></thead>
+        <tbody>
+            <tr><td>50</td><td>CORS, прокси на фронте</td><td>Настройка прокси (vite.config)</td><td>chore: setup proxy</td></tr>
+            <tr><td>51</td><td>JWT аутентификация на бэкенде</td><td>Контроллер Auth (регистрация, логин)</td><td>feat: add JWT auth backend</td></tr>
+            <tr><td>52</td><td>Хранение токена на фронте (localStorage)</td><td>Форма логина, сохранение токена</td><td>feat: frontend login</td></tr>
+            <tr><td>53</td><td>Защищенные маршруты (PrivateRoute)</td><td>Создание компонента PrivateRoute</td><td>feat: private routes</td></tr>
+            <tr><td>54</td><td>Отправка токена в запросах (axios interceptors)</td><td>Добавление interceptor для заголовка</td><td>feat: add auth header</td></tr>
+            <tr><td>55</td><td>Роли и права доступа</td><td>Разграничение admin/reader</td><td>feat: role-based access</td></tr>
+            <tr><td>56</td><td>Резервный день / финальная интеграция</td><td>Проверка всех сценариев</td><td>test: full auth flow</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Неделя 9 (дни 57–63) -->
+<div class="week-block">
+    <div class="week-title">Неделя 9: GitHub API углублённо (дни 57–63)</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Git / Английский</th></thead>
+        <tbody>
+            <tr><td>57</td><td>GitHub API – OAuth, получение токена</td><td>Настройка OAuth приложения на GitHub</td><td>feat: github OAuth setup</td></tr>
+            <tr><td>58</td><td>Сохранение токена в БД</td><td>Модель GithubToken, связь с пользователем</td><td>feat: store github token</td></tr>
+            <tr><td>59</td><td>Получение репозиториев с авторизацией</td><td>Использование токена для доступа к приватным репозиториям</td><td>feat: fetch private repos</td></tr>
+            <tr><td>60</td><td>Синхронизация репозиториев по расписанию</td><td>Фоновый сервис с Hangfire / Quartz</td><td>feat: scheduled sync</td></tr>
+            <tr><td>61</td><td>Отображение звезд, форков, языка</td><td>Расширение модели Project</td><td>feat: add stars, forks</td></tr>
+            <tr><td>62</td><td>Детальная страница репозитория</td><td>Показ README.md (конвертация из markdown)</td><td>feat: repository details</td></tr>
+            <tr><td>63</td><td>Резервный день / оптимизация</td><td>Кеширование, обработка ошибок</td><td>perf: cache and error handling</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Неделя 10 (дни 64–70) -->
+<div class="week-block">
+    <div class="week-title">Неделя 10: Многоязычность (i18n) – дни 64–70</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Git / Английский</th></thead>
+        <tbody>
+            <tr><td>64</td><td>react-i18next – установка, настройка</td><td>Добавление переключателя языков (en/ru)</td><td>feat: i18n setup</td></tr>
+            <tr><td>65</td><td>Перевод интерфейса</td><td>Перевод меню, кнопок, заголовков</td><td>feat: translate UI</td></tr>
+            <tr><td>66</td><td>Перевод контента (статьи)</td><td>Хранение постов с привязкой к языку</td><td>feat: multilingual posts</td></tr>
+            <tr><td>67</td><td>Маршрутизация с учетом языка</td><td>URL вида /en/posts/1</td><td>feat: language in routes</td></tr>
+            <tr><td>68</td><td>Интернационализация дат и чисел</td><td>Использование Intl</td><td>feat: localized dates</td></tr>
+            <tr><td>69</td><td>Резервный день / тестирование i18n</td><td>Проверка всех переводов</td><td>test: i18n</td></tr>
+            <tr><td>70</td><td>Деплой с i18n</td><td>Настройка переменных окружения</td><td>chore: i18n deploy</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Неделя 11 (дни 71–77) -->
+<div class="week-block">
+    <div class="week-title">Неделя 11: AI-ассистент (локальный DeepSeek-R1) – дни 71–77</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Git / Английский</th></thead>
+        <tbody>
+            <tr><td>71</td><td>Локальный DeepSeek-R1 – установка Ollama</td><td>Запуск модели, тестирование через терминал</td><td>chore: setup Ollama</td></tr>
+            <tr><td>72</td><td>C# клиент для Ollama (HttpClient)</td><td>Консольное приложение для запросов к AI</td><td>feat: Ollama C# client</td></tr>
+            <tr><td>73</td><td>Интеграция AI в API</td><td>Создание контроллера AI (POST /api/ai/ask)</td><td>feat: AI controller</td></tr>
+            <tr><td>74</td><td>Фронтенд – компонент чата</td><td>Простой интерфейс для отправки вопросов и показа ответов</td><td>feat: AI chat component</td></tr>
+            <tr><td>75</td><td>Сохранение истории чата (опционально)</td><td>Модель ChatHistory, сохранение в БД</td><td>feat: chat history</td></tr>
+            <tr><td>76</td><td>Улучшение UX (лоадеры, обработка ошибок)</td><td>Добавление индикатора загрузки, сообщений об ошибках</td><td>feat: AI loading states</td></tr>
+            <tr><td>77</td><td>Резервный день / доработка AI</td><td>Параметры модели (температура, токены)</td><td>feat: AI parameters</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Неделя 12 (дни 78–84) -->
+<div class="week-block">
+    <div class="week-title">Неделя 12: Telegram-бот на C# (дни 78–84)</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Git / Английский</th></thead>
+        <tbody>
+            <tr><td>78</td><td>Telegram.Bot – создание бота через BotFather</td><td>Получение токена, простое эхо-приложение</td><td>feat: telegram bot init</td></tr>
+            <tr><td>79</td><td>Обработка команд (/start, /help)</td><td>Добавление команд, ответы</td><td>feat: bot commands</td></tr>
+            <tr><td>80</td><td>Интеграция с AI</td><td>Команда /ask <вопрос> – запрос к AI API</td><td>feat: bot /ask</td></tr>
+            <tr><td>81</td><td>Асинхронная обработка длинных запросов</td><td>Использование фоновых задач</td><td>feat: async bot processing</td></tr>
+            <tr><td>82</td><td>Развертывание бота</td><td>Деплой на том же сервере, что и API</td><td>chore: deploy bot</td></tr>
+            <tr><td>83</td><td>Логирование и мониторинг</td><td>Добавление логов, отслеживание ошибок</td><td>feat: bot logging</td></tr>
+            <tr><td>84</td><td>Резервный день / тестирование бота</td><td>Проверка всех сценариев</td><td>test: bot flow</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Неделя 13 (дни 85–91) -->
+<div class="week-block">
+    <div class="week-title">Неделя 13: Docker, CI/CD (дни 85–91)</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Git / Английский</th></thead>
+        <tbody>
+            <tr><td>85</td><td>Основы Docker, Dockerfile</td><td>Создание Dockerfile для API</td><td>chore: add Dockerfile</td></tr>
+            <tr><td>86</td><td>docker-compose</td><td>Связка API + PostgreSQL</td><td>chore: docker-compose</td></tr>
+            <tr><td>87</td><td>Сборка и запуск контейнеров</td><td>Проверка локально</td><td>chore: test containers</td></tr>
+            <tr><td>88</td><td>GitHub Actions – базовый workflow</td><td>Автоматическая сборка и тестирование при push</td><td>ci: add build test</td></tr>
+            <tr><td>89</td><td>CI/CD – деплой на VPS / Azure</td><td>Настройка деплоя через SSH</td><td>ci: add deploy</td></tr>
+            <tr><td>90</td><td>Переменные окружения в CI/CD</td><td>Безопасное хранение секретов</td><td>ci: env vars</td></tr>
+            <tr><td>91</td><td>Резервный день / отладка CI/CD</td><td>Исправление ошибок пайплайна</td><td>ci: fix pipeline</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Неделя 14 (дни 92–98) -->
+<div class="week-block">
+    <div class="week-title">Неделя 14: Azure (дни 92–98)</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Git / Английский</th></thead>
+        <tbody>
+            <tr><td>92</td><td>Регистрация в Azure, бесплатный аккаунт</td><td>Создание App Service</td><td>chore: azure app service</td></tr>
+            <tr><td>93</td><td>Публикация API в Azure</td><td>Деплой через Git / GitHub Actions</td><td>chore: deploy to azure</td></tr>
+            <tr><td>94</td><td>Azure SQL Database</td><td>Создание и подключение к БД</td><td>chore: azure sql</td></tr>
+            <tr><td>95</td><td>Хранение статических файлов (Blob Storage)</td><td>Загрузка изображений для постов</td><td>feat: azure blob storage</td></tr>
+            <tr><td>96</td><td>Azure Functions (опционально)</td><td>Создание простой функции</td><td>feat: azure function</td></tr>
+            <tr><td>97</td><td>Мониторинг и логирование в Azure</td><td>Настройка Application Insights</td><td>chore: app insights</td></tr>
+            <tr><td>98</td><td>Резервный день / оптимизация</td><td>Масштабирование, производительность</td><td>perf: azure scaling</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Неделя 15 (дни 99–105) -->
+<div class="week-block">
+    <div class="week-title">Неделя 15: Тестирование (дни 99–105)</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Git / Английский</th></thead>
+        <tbody>
+            <tr><td>99</td><td>Юнит-тесты xUnit – основы</td><td>Тестирование методов репозитория</td><td>test: add xUnit tests</td></tr>
+            <tr><td>100</td><td>Моки (Moq) для зависимостей</td><td>Тестирование контроллеров с моками</td><td>test: add mocks</td></tr>
+            <tr><td>101</td><td>Интеграционные тесты API</td><td>Тестирование эндпоинтов с тестовой БД</td><td>test: integration tests</td></tr>
+            <tr><td>102</td><td>Тестирование React компонентов (RTL)</td><td>Тесты для PostList, PostCard</td><td>test: react components</td></tr>
+            <tr><td>103</td><td>Тестирование Redux (reducers, actions)</td><td>Тесты для slice</td><td>test: redux tests</td></tr>
+            <tr><td>104</td><td>E2E тесты (Cypress / Playwright)</td><td>Простые сценарии (логин, создание поста)</td><td>test: e2e</td></tr>
+            <tr><td>105</td><td>Резервный день / покрытие кода</td><td>Анализ покрытия, улучшение</td><td>test: improve coverage</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Неделя 16 (дни 106–112) -->
+<div class="week-block">
+    <div class="week-title">Неделя 16: Фриланс-подготовка (дни 106–112)</div>
+    <table>
+        <thead><tr><th>День</th><th>Теория</th><th>Практика</th><th>Результат / Git</th></thead>
+        <tbody>
+            <tr><td>106</td><td>Платформы для фриланса (Upwork, Toptal, Arc.dev)</td><td>Регистрация, заполнение профиля</td><td>документ: профили созданы</td></tr>
+            <tr><td>107</td><td>Написание proposals (откликов)</td><td>Анализ вакансий, шаблоны откликов</td><td>документ: proposal templates</td></tr>
+            <tr><td>108</td><td>Портфолио и презентация проектов</td><td>Добавление Stacked и Telegram-бота в портфолио</td><td>документ: portfolio update</td></tr>
+            <tr><td>109</td><td>Юридические аспекты (договоры, налоги)</td><td>Изучение основ договоров, способы оплаты</td><td>документ: legal notes</td></tr>
+            <tr><td>110</td><td>Поиск первых заказов</td><td>Отклики на 10+ вакансий</td><td>таблица откликов</td></tr>
+            <tr><td>111</td><td>Интервью и тестовые задания</td><td>Подготовка, прохождение собеседований</td><td>документ: interview prep</td></tr>
+            <tr><td>112</td><td>Резервный день / планирование</td><td>Анализ первых результатов, выбор специализации</td><td>документ: next steps</td></tr>
+        </tbody>
+    </table>
+    <p><em>Примечание: для дней 106–112 вместо коммитов рекомендуется вести отдельные документы/заметки.</em></p>
+</div>
+
+<div class="footer">
+    Полный детальный план соответствует этапам роадмапа Stacked. Обновляется по мере прохождения обучения.<br>
+    GitHub: <a href="https://github.com/siarheitsypko-stacked/stacked-plan" target="_blank">siarheitsypko-stacked/stacked-plan</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked – Промпты для AI-ассистента</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f1f5f9;
+            color: #0f172a;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .nav-bar {
+            background: #0f172a;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.1);
+        }
+        .nav-bar a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+        .nav-bar a:hover {
+            background: #1e293b;
+            color: white;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+        .subtitle {
+            color: #334155;
+            margin-bottom: 2rem;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+        }
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+        .card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+            border-left: 4px solid #3b82f6;
+            padding-left: 0.8rem;
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            margin: 1rem 0 0.5rem 0;
+            color: #1e293b;
+        }
+        .card p, .card li {
+            color: #334155;
+        }
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .prompt-box {
+            background: #f8fafc;
+            border-left: 4px solid #3b82f6;
+            padding: 0.8rem;
+            margin: 1rem 0;
+            border-radius: 0.8rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+        }
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #475569;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.5rem;
+        }
+        .version {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <a href="index.html">🏠 Главная</a>
+        <a href="roadmap.html">📘 Роадмап</a>
+        <a href="profile.html">👤 Профиль</a>
+        <a href="projects.html">📁 Проекты</a>
+        <a href="resume.html">📄 Резюме</a>
+        <a href="detailed-plan.html">📅 Детальный план</a>
+        <a href="notes.html">📝 Заметки</a>
+        <a href="specification.html">📋 ТЗ</a>
+        <a href="practise.html">💻 Практика</a>
+        <a href="prompts.html">🤖 Промпты</a>
+    </div>
+
+    <h1>🤖 Промпты для AI-ассистента</h1>
+    <div class="subtitle">Коллекция эффективных запросов для DeepSeek, ChatGPT и других LLM</div>
+    <div class="version">Обновляется по мере использования в обучении и проекте</div>
+
+    <div class="card">
+        <h2>📚 Обучение C# / .NET</h2>
+        <div class="prompt-box">
+            <strong>Объясни как новичку:</strong><br>
+            "Объясни разницу между абстрактным классом и интерфейсом в C# с примерами кода. Уровень: начинающий."
+        </div>
+        <div class="prompt-box">
+            <strong>Генерация учебных примеров:</strong><br>
+            "Создай простую консольную программу на C#, которая демонстрирует использование LINQ для фильтрации списка объектов. Добавь комментарии."
+        </div>
+        <div class="prompt-box">
+            <strong>Разбор ошибки:</strong><br>
+            "Вот код (вставка). Компилятор выдаёт ошибку CS1061. Объясни причину и предложи исправление."
+        </div>
+        <div class="prompt-box">
+            <strong>Сравнение подходов:</strong><br>
+            "Сравни подходы Clean Architecture и N-tier для ASP.NET Core. В каких случаях какой лучше?"
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>⚙️ Генерация и рефакторинг кода</h2>
+        <div class="prompt-box">
+            <strong>Создание контроллера API:</strong><br>
+            "Сгенерируй ASP.NET Core контроллер для сущности Post со стандартными CRUD-методами, используя Entity Framework Core. Используй DTO."
+        </div>
+        <div class="prompt-box">
+            <strong>Рефакторинг:</strong><br>
+            "Вот метод (вставка). Как его можно улучшить, следуя принципам чистого кода и SOLID?"
+        </div>
+        <div class="prompt-box">
+            <strong>Unit-тесты:</strong><br>
+            "Напиши xUnit тесты для следующего метода (вставка). Используй Moq для мокирования зависимостей."
+        </div>
+        <div class="prompt-box">
+            <strong>Конвертация в TypeScript:</strong><br>
+            "Перепиши этот JavaScript код на TypeScript с правильной типизацией."
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🐞 Отладка и объяснение ошибок</h2>
+        <div class="prompt-box">
+            <strong>Анализ стека ошибок:</strong><br>
+            "Вот полный стек ошибки из приложения ASP.NET Core. Определи возможную причину и предложи пошаговое решение."
+        </div>
+        <div class="prompt-box">
+            <strong>Почему не работает:</strong><br>
+            "Мой код не сохраняет данные в базу. Вот модель, контекст и контроллер. Что я упустил?"
+        </div>
+        <div class="prompt-box">
+            <strong>Оптимизация производительности:</strong><br>
+            "Этот LINQ-запрос выполняется медленно на большом наборе данных. Как его оптимизировать?"
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🏗️ Архитектура и проектирование</h2>
+        <div class="prompt-box">
+            <strong>Проектирование API:</strong><br>
+            "Спроектируй RESTful API для блога с постами, категориями и комментариями. Напиши примеры эндпоинтов и структуру ответов."
+        </div>
+        <div class="prompt-box">
+            <strong>Выбор паттерна:</strong><br>
+            "В моём проекте нужно отправлять уведомления после создания поста. Какой паттерн (Mediator, Observer, Events) лучше использовать и почему?"
+        </div>
+        <div class="prompt-box">
+            <strong>Документирование архитектуры:</strong><br>
+            "Помоги описать архитектуру моего проекта (Clean Architecture + CQRS) для технической документации. Сделай краткий обзор слоёв."
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>📝 Технический английский</h2>
+        <div class="prompt-box">
+            <strong>Проверка коммита:</strong><br>
+            "Проверь сообщение коммита на английском: 'fixed bug in validation'. Исправь, если нужно, в соответствии с Conventional Commits."
+        </div>
+        <div class="prompt-box">
+            <strong>Перевод технического текста:</strong><br>
+            "Переведи следующий текст на технически грамотный английский (для документации): (вставка текста на русском)."
+        </div>
+        <div class="prompt-box">
+            <strong>Описание проекта:</strong><br>
+            "Помоги написать краткое описание моего проекта Stacked на английском для LinkedIn и GitHub."
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>💡 Советы по обучению</h2>
+        <div class="prompt-box">
+            <strong>План изучения темы:</strong><br>
+            "Составь план изучения Entity Framework Core для человека, который уже знает основы C#. Включи практические упражнения."
+        </div>
+        <div class="prompt-box">
+            <strong>Список ресурсов:</strong><br>
+            "Посоветуй лучшие книги, курсы и каналы по C# и .NET для начинающих (на русском и английском)."
+        </div>
+        <div class="prompt-box">
+            <strong>Резюме для фриланса:</strong><br>
+            "Напиши шаблон отклика на заказ для C# разработчика на фриланс-бирже (Upwork). Упомяни опыт с ASP.NET Core и React."
+        </div>
+    </div>
+
+    <div class="footer">
+        Эти промпты можно использовать для взаимодействия с DeepSeek (в том числе локальным) и другими AI-ассистентами.
+        Коллекция будет пополняться по мере накопления опыта.<br>
+        GitHub: <a href="https://github.com/siarheitsypko-stacked/stacked-plan" target="_blank">siarheitsypko-stacked/stacked-plan</a>
+    </div>
+</div>
+</body>
+</html>

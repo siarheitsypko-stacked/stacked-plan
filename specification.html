@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked – Техническое задание</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f1f5f9;
+            color: #0f172a;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .nav-bar {
+            background: #0f172a;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.1);
+        }
+        .nav-bar a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+        .nav-bar a:hover {
+            background: #1e293b;
+            color: white;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+        .subtitle {
+            color: #334155;
+            margin-bottom: 2rem;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+        }
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+        .card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+            border-left: 4px solid #3b82f6;
+            padding-left: 0.8rem;
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            margin: 1rem 0 0.5rem 0;
+            color: #1e293b;
+        }
+        .card p, .card li {
+            color: #334155;
+        }
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .badge {
+            background: #eef2ff;
+            color: #1e40af;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-weight: 500;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+        }
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #475569;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.5rem;
+        }
+        .version {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <a href="index.html">🏠 Главная</a>
+        <a href="roadmap.html">📘 Роадмап</a>
+        <a href="profile.html">👤 Профиль</a>
+        <a href="projects.html">📁 Проекты</a>
+        <a href="resume.html">📄 Резюме</a>
+        <a href="detailed-plan.html">📅 Детальный план</a>
+        <a href="notes.html">📝 Заметки</a>
+        <a href="specification.html">📋 ТЗ</a>
+        <a href="practise.html">💻 Практика</a>
+        <a href="prompts.html">🤖 Промпты</a>
+    </div>
+
+    <h1>📋 Техническое задание</h1>
+    <div class="subtitle">Stacked — двуязычный блог-портфолио разработчика</div>
+    <div class="version">Версия: 1.0 | Дата: 23 марта 2026</div>
+
+    <div class="card">
+        <h2>1. Цель и назначение проекта</h2>
+        <p>Создать полноценный веб-сайт (блог-портфолио), который будет:</p>
+        <ul>
+            <li>Демонстрировать профессиональные навыки в области C#, .NET, React, TypeScript.</li>
+            <li>Служить платформой для публикации технических статей (на русском и английском).</li>
+            <li>Автоматически отображать репозитории с GitHub (звёзды, форки, описание).</li>
+            <li>Включать AI-ассистента (чат) для интерактивной помощи по коду и статьям.</li>
+            <li>Интегрироваться с Telegram‑ботом для управления контентом и вопросов.</li>
+            <li>Быть основой портфолио при поиске работы, фрилансе и релокации.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>2. Технологический стек</h2>
+        <ul>
+            <li><strong>Бэкенд:</strong> C# / .NET 8/9, ASP.NET Core Web API, Entity Framework Core, PostgreSQL (или SQLite для разработки).</li>
+            <li><strong>Фронтенд:</strong> React 18+, TypeScript, React Router, Redux Toolkit, Tailwind CSS (или CSS Modules).</li>
+            <li><strong>Инфраструктура:</strong> Docker, docker-compose, GitHub Actions (CI/CD), Azure (App Services, SQL, Blob Storage).</li>
+            <li><strong>Интеграции:</strong> GitHub API (Octokit), Telegram Bot API, локальный AI (DeepSeek-R1 через Ollama), SignalR (для чата).</li>
+            <li><strong>Тестирование:</strong> xUnit, Moq, React Testing Library, Cypress/Playwright (опционально).</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>3. Функциональные требования</h2>
+        <h3>3.1. Публичная часть (блог)</h3>
+        <ul>
+            <li>Главная страница со списком последних статей (пагинация, по 10 статей).</li>
+            <li>Страница отдельной статьи (заголовок, текст, дата, теги, комментарии).</li>
+            <li>Страницы категорий и тегов.</li>
+            <li>Страница «О себе» (биография, контакты, ссылки на GitHub/LinkedIn).</li>
+            <li>Страница проектов с GitHub (автоматическая подгрузка репозиториев, фильтрация по языку).</li>
+            <li>Переключение языков (русский/английский) с сохранением выбора в localStorage.</li>
+            <li>SEO-оптимизация (метатеги, sitemap.xml, robots.txt).</li>
+        </ul>
+
+        <h3>3.2. Административная часть</h3>
+        <ul>
+            <li>Защищённый вход (JWT, роли: admin/reader).</li>
+            <li>CRUD для статей (WYSIWYG-редактор или Markdown).</li>
+            <li>Управление категориями и тегами.</li>
+            <li>Модерация комментариев.</li>
+            <li>Обновление данных из GitHub (ручное или по расписанию).</li>
+            <li>Просмотр статистики (просмотры, комментарии).</li>
+            <li>Встроенный AI-чат для помощи (отвечает на вопросы по коду/статьям).</li>
+        </ul>
+
+        <h3>3.3. Интеграция с GitHub</h3>
+        <ul>
+            <li>Авторизация через OAuth (опционально).</li>
+            <li>Фоновый сервис (IHostedService) для синхронизации репозиториев (раз в сутки).</li>
+            <li>Хранение данных репозиториев в локальной БД (название, описание, язык, звёзды, форки, дата последнего коммита).</li>
+            <li>Отображение README.md на странице проекта.</li>
+        </ul>
+
+        <h3>3.4. AI-ассистент и Telegram‑бот</h3>
+        <ul>
+            <li>Локальный AI-сервер (Ollama + DeepSeek-R1 1.5b / 7b).</li>
+            <li>Чат в админке: отправка запросов к AI, вывод ответа, сохранение истории (опционально).</li>
+            <li>Telegram‑бот: команды /start, /help, /ask &lt;вопрос&gt; (через AI), /newpost (создание поста).</li>
+            <li>Бот должен работать на том же сервере, что и API (контейнеризация).</li>
+        </ul>
+
+        <h3>3.5. Производительность и безопасность</h3>
+        <ul>
+            <li>Кэширование популярных страниц (Redis или in-memory).</li>
+            <li>Защита от XSS, CSRF, SQL-инъекций.</li>
+            <li>Валидация всех входных данных (FluentValidation).</li>
+            <li>JWT с коротким временем жизни, refresh-токены.</li>
+            <li>Поддержка HTTPS (Let's Encrypt).</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>4. Нефункциональные требования</h2>
+        <ul>
+            <li><strong>Масштабируемость:</strong> архитектура построена на принципах Clean Architecture, слои разделены.</li>
+            <li><strong>Тестируемость:</strong> юнит-тесты покрывают ключевую бизнес-логику (≥70%).</li>
+            <li><strong>Документация:</strong> Swagger для API, README.md, комментарии в коде (XML).</li>
+            <li><strong>Деплой:</strong> автоматический через GitHub Actions (push в main).</li>
+            <li><strong>Доступность:</strong> сайт должен работать 24/7, минимальное время отклика < 2 секунд.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>5. Этапы разработки (согласно роадмапу)</h2>
+        <ul>
+            <li><strong>Этап 1 (месяц 1):</strong> Консольный прототип BlogConsole (CRUD, файловое хранилище).</li>
+            <li><strong>Этап 2 (месяц 1–2):</strong> Web API (ASP.NET Core, EF Core, SQLite/PostgreSQL, аутентификация).</li>
+            <li><strong>Этап 3 (месяц 2):</strong> Фронтенд на React + TypeScript (компоненты, роутинг, Redux).</li>
+            <li><strong>Этап 4 (месяц 3):</strong> Интеграция с GitHub API, AI-ассистент, Telegram-бот.</li>
+            <li><strong>Этап 5 (месяц 4):</strong> Docker, CI/CD, деплой в Azure, фриланс-подготовка.</li>
+        </ul>
+        <p>Детальный план каждого дня описан в <a href="detailed-plan.html">detailed-plan.html</a>.</p>
+    </div>
+
+    <div class="card">
+        <h2>6. Критерии успешной сдачи</h2>
+        <ul>
+            <li>Все функциональные требования реализованы и протестированы.</li>
+            <li>Код выложен на GitHub, имеется история коммитов (английские сообщения).</li>
+            <li>Сайт доступен по постоянной ссылке (GitHub Pages или Azure).</li>
+            <li>Проект описан в профиле разработчика (<a href="profile.html">profile.html</a>).</li>
+            <li>Проведено не менее трёх тестовых запусков с реальными пользователями (друзья/коллеги).</li>
+            <li>Подготовлена презентация проекта (видео или PDF) для работодателя.</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        Техническое задание является живым документом и может уточняться в процессе разработки.<br>
+        GitHub: <a href="https://github.com/siarheitsypko-stacked/stacked-plan" target="_blank">siarheitsypko-stacked/stacked-plan</a>
+    </div>
+</div>
+</body>
+</html>

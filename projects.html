@@ -116,6 +116,14 @@
             border-top: 1px solid #e2e8f0;
             padding-top: 1.5rem;
         }
+        .status-badge {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-weight: normal;
+        }
+        .status-active { background: #dcfce7; color: #166534; }
+        .status-plan { background: #fff3cd; color: #856404; }
     </style>
 </head>
 <body>
@@ -128,13 +136,16 @@
         <a href="resume.html">📄 Резюме</a>
         <a href="detailed-plan.html">📅 Детальный план</a>
         <a href="notes.html">📝 Заметки</a>
+        <a href="specification.html">📋 ТЗ</a>
+        <a href="practise.html">💻 Практика</a>
+        <a href="prompts.html">🤖 Промпты</a>
     </div>
 
     <h1>📁 Stacked – Проекты и связь с роадмапом</h1>
     <div class="subtitle">Три ключевых проекта профиля и их соответствие этапам обучения</div>
 
     <div class="card">
-        <h2>📟 BlogConsole <span style="font-size:0.7rem; background:#dcfce7; padding:0.2rem 0.6rem; border-radius:20px; color:#166534;">активный</span></h2>
+        <h2>📟 BlogConsole <span class="status-badge status-active">активный</span></h2>
         <div class="tech">
             <span>C#</span><span>.NET 8</span><span>JSON</span><span>Repository pattern</span><span>LINQ</span><span>Git</span>
         </div>
@@ -155,7 +166,7 @@
     </div>
 
     <div class="card">
-        <h2>⚙️ Stacked API <span style="font-size:0.7rem; background:#fff3cd; padding:0.2rem 0.6rem; border-radius:20px; color:#856404;">в процессе</span></h2>
+        <h2>⚙️ Stacked API <span class="status-badge status-active">в процессе</span></h2>
         <div class="tech">
             <span>ASP.NET Core</span><span>Clean Architecture</span><span>CQRS</span><span>EF Core</span><span>PostgreSQL</span><span>Swagger</span>
         </div>
@@ -179,7 +190,7 @@
     </div>
 
     <div class="card">
-        <h2>🤖 Telegram‑бот (AI assistant) <span style="font-size:0.7rem; background:#fff3cd; padding:0.2rem 0.6rem; border-radius:20px; color:#856404;">в разработке</span></h2>
+        <h2>🤖 Telegram‑бот (AI assistant) <span class="status-badge status-active">в разработке</span></h2>
         <div class="tech">
             <span>C#</span><span>Telegram.Bot</span><span>AI (Semantic Kernel)</span><span>Ollama</span><span>DeepSeek-R1</span><span>Docker</span>
         </div>

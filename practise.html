@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked – Практика (exercises & labs)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f1f5f9;
+            color: #0f172a;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .nav-bar {
+            background: #0f172a;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.1);
+        }
+        .nav-bar a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+        .nav-bar a:hover {
+            background: #1e293b;
+            color: white;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+        .subtitle {
+            color: #334155;
+            margin-bottom: 2rem;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+        }
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+        .card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+            border-left: 4px solid #3b82f6;
+            padding-left: 0.8rem;
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            margin: 1rem 0 0.5rem 0;
+            color: #1e293b;
+        }
+        .card p, .card li {
+            color: #334155;
+        }
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .code-block {
+            background: #f1f5f9;
+            padding: 0.8rem;
+            border-radius: 0.8rem;
+            font-family: monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+        }
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #475569;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.5rem;
+        }
+        .version {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <a href="index.html">🏠 Главная</a>
+        <a href="roadmap.html">📘 Роадмап</a>
+        <a href="profile.html">👤 Профиль</a>
+        <a href="projects.html">📁 Проекты</a>
+        <a href="resume.html">📄 Резюме</a>
+        <a href="detailed-plan.html">📅 Детальный план</a>
+        <a href="notes.html">📝 Заметки</a>
+        <a href="specification.html">📋 ТЗ</a>
+        <a href="practise.html">💻 Практика</a>
+        <a href="prompts.html">🤖 Промпты</a>
+    </div>
+
+    <h1>💻 Практика</h1>
+    <div class="subtitle">Выполненные упражнения, лабораторные работы и практические задания</div>
+    <div class="version">Актуализируется по мере прохождения обучения</div>
+
+    <div class="card">
+        <h2>📌 Базовый этап: C# и консоль</h2>
+        <ul>
+            <li><strong>День 1–2:</strong> Первая программа "Hello, USA!", установка инструментов, Git. ✅</li>
+            <li><strong>День 2 (часть 1):</strong> Ввод/валидация поста (название ≥3, содержание не пусто). <a href="https://github.com/siarheitsypko-stacked/stacked-plan/blob/main/BlogConsole/Program.cs" target="_blank">Код →</a></li>
+            <li><strong>День 2 (часть 2):</strong> Меню с while + switch (создать пост, выйти) – в процессе.</li>
+            <li><strong>Дни 3–7 (план):</strong> Циклы, массивы, классы, перечисления. Консольный менеджер постов с хранением в List&lt;Post&gt;. (Скоро)</li>
+        </ul>
+        <p><strong>Репозиторий практики:</strong> <a href="https://github.com/siarheitsypko-stacked/stacked-plan/tree/main/BlogConsole" target="_blank">BlogConsole</a></p>
+    </div>
+
+    <div class="card">
+        <h2>🛠️ Промежуточные мини-проекты</h2>
+        <ul>
+            <li><strong>Bored App (ознакомление с фронтендом):</strong> простое приложение на HTML/CSS/JS. <a href="https://github.com/volkomorov2001/bored-app.v1" target="_blank">GitHub (не мой, учебный)</a></li>
+            <li><strong>Планируется:</strong> простое веб-API для задач (ToDo) – перед началом Stacked API.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🏗️ Тренировочные задания (Codewars и подобные)</h2>
+        <p>Будут добавляться по мере решения. Примеры:</p>
+        <ul>
+            <li>Реверс строки</li>
+            <li>Поиск максимума в массиве</li>
+            <li>FizzBuzz</li>
+            <li>Простые алгоритмы с использованием LINQ</li>
+        </ul>
+        <p>Ссылки на решения будут выкладываться в отдельный файл или в этот раздел.</p>
+    </div>
+
+    <div class="card">
+        <h2>📘 Практика по книге Троелсена</h2>
+        <p>Параллельное чтение: ежедневно 30 минут в метро. Конспекты и примеры кода из книги ведутся в отдельном файле (пока в заметках). Основные темы: типы, классы, коллекции, LINQ, делегаты, события, работа с файлами.</p>
+    </div>
+
+    <div class="footer">
+        Все практические результаты будут добавляться сюда по мере выполнения этапов роадмапа.<br>
+        GitHub: <a href="https://github.com/siarheitsypko-stacked/stacked-plan" target="_blank">siarheitsypko-stacked/stacked-plan</a>
+    </div>
+</div>
+</body>
+</html>

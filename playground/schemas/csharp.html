@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C# Mind Map | Схема языка</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background: #f5f7fb;
+            padding: 2rem 1rem;
+            color: #1e293b;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .nav-bar {
+            background: #0f172a;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.1);
+        }
+        .nav-bar a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+        .nav-bar a:hover { background: #1e293b; color: white; }
+        h1 {
+            text-align: center;
+            font-size: 2.2rem;
+            background: linear-gradient(135deg, #68217A, #9B4F96);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .sub { text-align: center; color: #475569; margin-bottom: 2rem; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 1.8rem;
+        }
+        .card {
+            background: white;
+            border-radius: 1.2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card-header {
+            background: #f8fafc;
+            padding: 0.8rem 1.2rem;
+            border-bottom: 2px solid #e9eef3;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .card-content { padding: 1rem 1.2rem 1.2rem; }
+        .card-content p { margin-bottom: 0.5rem; color: #334155; font-size: 0.9rem; }
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 0.6rem;
+            border-radius: 0.6rem;
+            overflow-x: auto;
+            font-size: 0.75rem;
+            margin: 0.5rem 0 0.8rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        code {
+            font-family: monospace;
+            background: #f1f5f9;
+            padding: 0.2rem 0.3rem;
+            border-radius: 0.3rem;
+            color: #68217A;
+            font-size: 0.85rem;
+        }
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin: 0.6rem 0 0.2rem;
+        }
+        .badge {
+            background: #f1f5f9;
+            padding: 0.2rem 0.6rem;
+            border-radius: 2rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #1e293b;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem 0 1rem;
+            border-top: 1px solid #e2e8f0;
+            color: #5b6e8c;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <a href="index.html">🏠 Главная</a>
+        <a href="csharp.html">🔷 C#</a>
+        <a href="css.html">🎨 CSS</a>
+        <a href="javascript.html">📘 JS</a>
+        <a href="typescript.html">📐 TS</a>
+        <a href="xml.html">🗺️ XML</a>
+    </div>
+    <h1>🧠 C# Mind Map</h1>
+    <div class="sub">Ключевые разделы языка с примерами кода</div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-header"><span>📦</span> Базовый синтаксис</div>
+            <div class="card-content">
+                <p>Типы: <code>int</code>, <code>double</code>, <code>bool</code>, <code>string</code>, <code>object</code>, <code>dynamic</code>, <code>var</code>, <code>enum</code>, nullable (<code>int?</code>)</p>
+                <pre><code>int age = 25;
+double pi = 3.14;
+bool isReady = true;
+string name = "C#";
+object obj = 42;
+dynamic dyn = "тип меняется";
+enum Color { Red, Green, Blue }</code></pre>
+                <div class="badge-list"><span class="badge">value types</span><span class="badge">reference types</span><span class="badge">dynamic</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><span>🏛️</span> ООП</div>
+            <div class="card-content">
+                <p>Модификаторы <code>public</code>, <code>private</code>, <code>protected</code>, <code>internal</code>. Наследование, полиморфизм, абстракция, интерфейсы.</p>
+                <pre><code>public class Animal { public virtual void Speak() => Console.WriteLine("..."); }
+public class Dog : Animal { public override void Speak() => Console.WriteLine("Гав!"); }
+interface ILogger { void Log(string msg); }</code></pre>
+                <div class="badge-list"><span class="badge">inheritance</span><span class="badge">polymorphism</span><span class="badge">encapsulation</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><span>⚙️</span> Дженерики (Generics)</div>
+            <div class="card-content">
+                <pre><code>public class List&lt;T&gt; { ... }
+public T GetValue&lt;T&gt;(T input) => input;
+void Process&lt;T&gt;(T item) where T : IComparable { ... }</code></pre>
+                <div class="badge-list"><span class="badge">type safety</span><span class="badge">reusability</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><span>🔍</span> LINQ и коллекции</div>
+            <div class="card-content">
+                <pre><code>var numbers = new List&lt;int&gt; { 1, 2, 3, 4 };
+var evens = numbers.Where(n => n % 2 == 0).Select(n => n * 10);</code></pre>
+                <div class="badge-list"><span class="badge">deferred execution</span><span class="badge">query syntax</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><span>⏳</span> Асинхронность</div>
+            <div class="card-content">
+                <pre><code>public async Task&lt;string&gt; FetchDataAsync()
+{
+    using var client = new HttpClient();
+    return await client.GetStringAsync(url);
+}</code></pre>
+                <div class="badge-list"><span class="badge">async/await</span><span class="badge">Task</span><span class="badge">TPL</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><span>🚀</span> Современные возможности C#</div>
+            <div class="card-content">
+                <p>Records, init-only properties, pattern matching, top-level statements, nullable reference types.</p>
+                <pre><code>public record Person(string Name, int Age);
+var p = new Person("Alice", 30);
+string result = number switch { > 0 => "positive", _ => "zero" };</code></pre>
+                <div class="badge-list"><span class="badge">C# 9+</span><span class="badge">C# 10/11/12</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><span>⚠️</span> Исключения</div>
+            <div class="card-content">
+                <pre><code>try { int.Parse("abc"); }
+catch (FormatException ex) { Console.WriteLine(ex.Message); }
+finally { /* освобождение ресурсов */ }</code></pre>
+                <div class="badge-list"><span class="badge">try-catch-finally</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><span>🛠️</span> Инструменты и экосистема</div>
+            <div class="card-content">
+                <p>.NET (Core 8/9), Visual Studio, Rider, NuGet, dotnet CLI.</p>
+                <pre><code>dotnet new console -n MyApp
+dotnet add package Newtonsoft.Json</code></pre>
+                <div class="badge-list"><span class="badge">cross-platform</span><span class="badge">open source</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">🧩 C# Mind Map — все ключевые концепции языка в компактных карточках с примерами.</div>
+</div>
+</body>
+</html>

@@ -45,11 +45,57 @@
             margin-bottom: 0.5rem;
         }
         .sub { text-align: center; color: #4a627a; margin-bottom: 1rem; font-size: 1.1rem; }
+
+        /* блок описания языковой среды */
+        .environment {
+            background: linear-gradient(135deg, #f0f6ff 0%, #e8f0fe 100%);
+            border-left: 5px solid #007acc;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .environment h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #007acc;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .environment p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #2c3e66;
+        }
+        .env-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .env-item {
+            background: white;
+            padding: 0.8rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #cce4ff;
+            transition: 0.2s;
+        }
+        .env-item strong {
+            color: #007acc;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .env-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,122,204,0.1);
+        }
+
         .mermaid-container {
             background: white;
             border-radius: 1.2rem;
             padding: 1.2rem;
-            margin: 1.5rem 0 2rem;
+            margin: 1rem 0 2rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             border: 1px solid #e2e8f0;
         }
@@ -134,6 +180,7 @@
             .grid { grid-template-columns: 1fr; gap: 1.2rem; }
             body { padding: 1rem; }
             h1 { font-size: 1.8rem; }
+            .env-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -149,6 +196,20 @@
     </div>
     <h1>📐 TypeScript Mind Map</h1>
     <div class="sub">Статическая типизация, интерфейсы, дженерики, утилитарные типы и мощные инструменты</div>
+
+    <!-- Блок: Языковая среда TypeScript -->
+    <div class="environment">
+        <h2><span>🌐</span> Языковая среда TypeScript</h2>
+        <p>TypeScript — строго типизированное надмножество JavaScript, разработанное Microsoft. Он компилируется в чистый JavaScript и может работать в любой среде, где выполняется JS (браузеры, Node.js, Deno, Bun). Основная цель — добавить статическую типизацию, улучшить читаемость кода и упростить поддержку крупных проектов. Экосистема TypeScript тесно связана с JavaScript, но включает собственные инструменты и расширения.</p>
+        <div class="env-grid">
+            <div class="env-item"><strong>⚙️ Компилятор (tsc)</strong> Преобразует TypeScript в JavaScript, проверяет типы, поддерживает строгий режим и настройку через tsconfig.json.</div>
+            <div class="env-item"><strong>📦 Интеграция с JS</strong> Любая JS-библиотека может использоваться с TypeScript через файлы деклараций (@types/...).</div>
+            <div class="env-item"><strong>🛠️ Инструменты разработки</strong> VS Code (написан на TS), WebStorm, ESLint с плагином @typescript-eslint, Prettier.</div>
+            <div class="env-item"><strong>🏗️ Фреймворки</strong> Angular (написан на TS), React + TS, Vue 3, NestJS (серверный) — повсеместная поддержка.</div>
+            <div class="env-item"><strong>🚀 Современные возможности</strong> Декораторы (экспериментальные), утилитарные типы, условные типы, сопоставленные типы.</div>
+            <div class="env-item"><strong>📚 Сообщество и стандарты</strong> TypeScript развивается активно, версии выходят каждые 2–3 месяца, обратная совместимость с JavaScript сохраняется.</div>
+        </div>
+    </div>
 
     <!-- Mermaid диаграмма взаимосвязей TypeScript -->
     <div class="mermaid-container">

@@ -59,6 +59,52 @@
             margin: 0.75rem auto 0;
             opacity: 0.85;
         }
+
+        /* блок описания языковой среды */
+        .environment {
+            background: linear-gradient(135deg, #e6f4ec 0%, #d9efdf 100%);
+            border-left: 5px solid #2c6e5c;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .environment h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #1a5a4a;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .environment p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #2c5a4b;
+        }
+        .env-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .env-item {
+            background: white;
+            padding: 0.8rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #c2dbd0;
+            transition: 0.2s;
+        }
+        .env-item strong {
+            color: #2c6e5c;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .env-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(44,110,92,0.1);
+        }
+
         .mermaid-container {
             background: white;
             border-radius: 1.2rem;
@@ -169,6 +215,7 @@
             .grid { gap: 1.2rem; }
             .card-header h2 { font-size: 1.3rem; }
             .hero h1 { font-size: 1.9rem; }
+            .env-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 480px) {
             .card-content { padding: 1.2rem; }
@@ -190,6 +237,20 @@
     <div class="hero">
         <h1><span>🗺️</span> XML Mind Map <span>🧩</span></h1>
         <p>Карточная схема ключевых концепций, синтаксиса и экосистемы XML — от основ до современных инструментов</p>
+    </div>
+
+    <!-- Блок: Языковая среда XML -->
+    <div class="environment">
+        <h2><span>🌐</span> Языковая среда XML</h2>
+        <p>XML (eXtensible Markup Language) — метаязык для создания структурированных документов. Он не является языком программирования, но используется повсеместно в обмене данными, конфигурациях, веб-сервисах, офисных форматах. Экосистема XML включает технологии валидации (DTD, XSD), навигации (XPath), трансформации (XSLT), запросов (XQuery), а также множество инструментов для парсинга и обработки на всех популярных платформах.</p>
+        <div class="env-grid">
+            <div class="env-item"><strong>📄 Спецификации W3C</strong> XML 1.0/1.1, Namespaces, XInclude — стандарты, поддерживаемые всеми вендорами.</div>
+            <div class="env-item"><strong>🛠️ Парсеры и валидаторы</strong> libxml2 (C), Xerces (Java/C++), System.Xml (.NET), JDOM, ElementTree (Python).</div>
+            <div class="env-item"><strong>🧩 Связанные технологии</strong> SOAP (веб-сервисы), SVG (графика), RSS/Atom (ленты), Office Open XML (docx, xlsx), XBRL (финансовая отчётность).</div>
+            <div class="env-item"><strong>💻 Инструменты разработки</strong> XMLSpy, Oxygen XML Editor, VS Code (с расширениями), IntelliJ IDEA — автодополнение, отладка XSLT, визуальное редактирование.</div>
+            <div class="env-item"><strong>⚙️ CLI утилиты</strong> xmllint, xsltproc, saxon (XSLT 3.0), xmlstarlet — для автоматизации и CI/CD.</div>
+            <div class="env-item"><strong>📚 Сообщество</strong> XML остаётся фундаментом для enterprise-интеграции, обмена данными между системами и стандартизации.</div>
+        </div>
     </div>
 
     <!-- Mermaid диаграмма взаимосвязей XML -->

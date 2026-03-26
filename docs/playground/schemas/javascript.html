@@ -45,11 +45,57 @@
             margin-bottom: 0.5rem;
         }
         .sub { text-align: center; color: #5a626e; margin-bottom: 1rem; }
+
+        /* блок описания языковой среды */
+        .environment {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffefdb 100%);
+            border-left: 5px solid #f7b32b;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .environment h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #b85c1a;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .environment p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #5a3e2b;
+        }
+        .env-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .env-item {
+            background: white;
+            padding: 0.8rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #ffddb0;
+            transition: 0.2s;
+        }
+        .env-item strong {
+            color: #f7b32b;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .env-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(247,179,43,0.1);
+        }
+
         .mermaid-container {
             background: white;
             border-radius: 1.2rem;
             padding: 1.2rem;
-            margin: 1.5rem 0 2rem;
+            margin: 1rem 0 2rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             border: 1px solid #ffe0b5;
         }
@@ -134,6 +180,7 @@
             .grid { grid-template-columns: 1fr; gap: 1.2rem; }
             body { padding: 1rem; }
             h1 { font-size: 1.8rem; }
+            .env-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -149,6 +196,21 @@
     </div>
     <h1>📘 JavaScript Mind Map</h1>
     <div class="sub">Ключевые разделы языка ES6+ с примерами кода</div>
+
+    <!-- Блок: Языковая среда JavaScript -->
+    <div class="environment">
+        <h2><span>🌐</span> Языковая среда JavaScript</h2>
+        <p>JavaScript — интерпретируемый язык с динамической типизацией, изначально созданный для браузеров, но сегодня работающий везде: на сервере (Node.js), в мобильных приложениях (React Native), в десктопе (Electron) и даже в микроконтроллерах. Экосистема JS — одна из крупнейших в мире, с огромным количеством библиотек, фреймворков и инструментов.</p>
+        <div class="env-grid">
+            <div class="env-item"><strong>⚙️ Движки</strong> V8 (Chrome, Node.js), SpiderMonkey (Firefox), JavaScriptCore (Safari) — отвечают за компиляцию JIT и выполнение кода.</div>
+            <div class="env-item"><strong>🖥️ Среда выполнения</strong> Браузеры (с DOM, BOM, Web APIs) и Node.js (с модулями fs, http, child_process).</div>
+            <div class="env-item"><strong>📦 Менеджеры пакетов</strong> npm, yarn, pnpm — крупнейший реестр библиотек в мире.</div>
+            <div class="env-item"><strong>🛠️ Сборщики и транспиляция</strong> Webpack, Vite, esbuild, Babel (для поддержки старых браузеров).</div>
+            <div class="env-item"><strong>🏗️ Фреймворки и библиотеки</strong> React, Vue, Angular, Svelte — доминируют в разработке интерфейсов.</div>
+            <div class="env-item"><strong>🧪 Тестирование</strong> Jest, Vitest, Mocha, Cypress — экосистема тестирования.</div>
+            <div class="env-item"><strong>🌍 Сообщество и стандарты</strong> ECMAScript (TC39) ежегодно добавляет новые возможности; процесс proposals открыт.</div>
+        </div>
+    </div>
 
     <!-- Mermaid диаграмма взаимосвязей JavaScript -->
     <div class="mermaid-container">

@@ -44,11 +44,57 @@
             margin-bottom: 0.5rem;
         }
         .sub { text-align: center; color: #475569; margin-bottom: 1rem; }
+
+        /* блок описания языковой среды */
+        .environment {
+            background: linear-gradient(135deg, #f9f5ff 0%, #f0eaff 100%);
+            border-left: 5px solid #9B4F96;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .environment h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #5e2a6e;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .environment p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #2d3a4b;
+        }
+        .env-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .env-item {
+            background: white;
+            padding: 0.8rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e0d4ff;
+            transition: 0.2s;
+        }
+        .env-item strong {
+            color: #68217A;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .env-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(104,33,122,0.1);
+        }
+
         .mermaid-container {
             background: white;
             border-radius: 1.2rem;
             padding: 1.2rem;
-            margin: 1.5rem 0 2rem;
+            margin: 1rem 0 2rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             border: 1px solid #e2e8f0;
         }
@@ -123,6 +169,11 @@
             border-top: 1px solid #e2e8f0;
             color: #5b6e8c;
         }
+        @media (max-width: 720px) {
+            .grid { grid-template-columns: 1fr; gap: 1.2rem; }
+            body { padding: 1rem; }
+            .env-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -137,6 +188,20 @@
     </div>
     <h1>🧠 C# Mind Map</h1>
     <div class="sub">Ключевые разделы языка с примерами кода</div>
+
+    <!-- Блок: Языковая среда C# / .NET -->
+    <div class="environment">
+        <h2><span>🌐</span> Языковая среда C# и .NET</h2>
+        <p>C# — современный объектно-ориентированный язык, разработанный Microsoft. Он работает на платформе .NET (ранее .NET Framework, теперь кросс-платформенный .NET 8/9/…). Экосистема включает мощную среду выполнения (CLR), сборщик мусора, обширную стандартную библиотеку (BCL) и богатый инструментарий.</p>
+        <div class="env-grid">
+            <div class="env-item"><strong>⚙️ .NET Runtime (CLR)</strong> Управляет памятью, JIT-компиляцией, безопасностью типов и многопоточностью.</div>
+            <div class="env-item"><strong>📦 Платформы</strong> .NET 8/9 (кросс-платформа: Windows, Linux, macOS), .NET Framework (Windows), Xamarin/Maui (мобильные), Unity (игры).</div>
+            <div class="env-item"><strong>🛠️ Инструменты</strong> Visual Studio, VS Code, Rider, .NET CLI, NuGet (менеджер пакетов).</div>
+            <div class="env-item"><strong>📚 Основные библиотеки</strong> ASP.NET Core (веб), Entity Framework Core (ORM), WinForms/WPF (десктоп), Azure SDK, ML.NET (машинное обучение).</div>
+            <div class="env-item"><strong>🔁 Кроссплатформенность</strong> Сборки .NET работают везде; существует AOT-компиляция (Native AOT) для оптимизированных бинарников.</div>
+            <div class="env-item"><strong>🏭 Сообщество и экосистема</strong> Огромное количество open-source библиотек, поддержка Microsoft, активные конференции (DotNetConf, MS Build).</div>
+        </div>
+    </div>
 
     <!-- Mermaid диаграмма взаимосвязей -->
     <div class="mermaid-container">

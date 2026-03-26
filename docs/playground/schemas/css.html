@@ -44,11 +44,57 @@
             margin-bottom: 0.5rem;
         }
         .sub { text-align: center; color: #1e4a76; margin-bottom: 1rem; }
+
+        /* блок описания языковой среды */
+        .environment {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f4ff 100%);
+            border-left: 5px solid #007acc;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .environment h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #005c99;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .environment p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #1e4a76;
+        }
+        .env-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .env-item {
+            background: white;
+            padding: 0.8rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #cce4ff;
+            transition: 0.2s;
+        }
+        .env-item strong {
+            color: #007acc;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .env-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,122,204,0.1);
+        }
+
         .mermaid-container {
             background: white;
             border-radius: 1.2rem;
             padding: 1.2rem;
-            margin: 1.5rem 0 2rem;
+            margin: 1rem 0 2rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             border: 1px solid #e2e8f0;
         }
@@ -122,6 +168,7 @@
         @media (max-width: 720px) {
             body { padding: 1rem; }
             .grid { grid-template-columns: 1fr; gap: 1.2rem; }
+            .env-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -137,6 +184,20 @@
     </div>
     <h1>🎨 CSS Mind Map</h1>
     <div class="sub">каскадные таблицы стилей — гибкость, мощь, современный дизайн</div>
+
+    <!-- Блок: Языковая среда CSS (браузеры, инструменты, экосистема) -->
+    <div class="environment">
+        <h2><span>🌐</span> Языковая среда CSS</h2>
+        <p>CSS (Cascading Style Sheets) — язык оформления веб-страниц, работающий в связке с HTML и JavaScript. Вся мощь CSS реализуется через браузерные движки (Blink, Gecko, WebKit), которые интерпретируют стили и отображают их. Экосистема включает препроцессоры, фреймворки, инструменты оптимизации и современные спецификации W3C.</p>
+        <div class="env-grid">
+            <div class="env-item"><strong>⚙️ Браузерные движки</strong> Blink (Chrome, Edge), Gecko (Firefox), WebKit (Safari) — отвечают за рендеринг CSS.</div>
+            <div class="env-item"><strong>📐 Препроцессоры</strong> Sass, Less, Stylus — добавляют переменные, вложенность, миксины, компилируются в обычный CSS.</div>
+            <div class="env-item"><strong>🛠️ Инструменты разработчика</strong> DevTools в браузерах: инспектирование, вычисленные стили, отладка анимаций, профилирование производительности.</div>
+            <div class="env-item"><strong>📦 Фреймворки и библиотеки</strong> Tailwind CSS (утилитарный), Bootstrap, Bulma, Materialize — ускоряют разработку интерфейсов.</div>
+            <div class="env-item"><strong>🚀 Пост-процессинг</strong> PostCSS с плагинами (Autoprefixer, CSS Modules, PurgeCSS) для кросс-браузерности и оптимизации.</div>
+            <div class="env-item"><strong>📏 Современные спецификации</strong> CSS Grid, Flexbox, Container Queries, Layers, :has() — постоянно эволюционирующий стандарт.</div>
+        </div>
+    </div>
 
     <!-- Mermaid диаграмма взаимосвязей CSS -->
     <div class="mermaid-container">

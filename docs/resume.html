@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сергей — C# / .NET Developer | Резюме</title>
+    <title>Сергей | Резюме C# / .NET Developer</title>
     <style>
         * {
             margin: 0;
@@ -11,19 +11,15 @@
             box-sizing: border-box;
         }
         body {
-            background: #e9eef3;
             font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f1f5f9;
+            color: #0f172a;
             line-height: 1.5;
-            color: #1e2a3e;
             padding: 2rem 1rem;
         }
-        .resume {
+        .container {
             max-width: 1000px;
             margin: 0 auto;
-            background: #ffffff;
-            border-radius: 24px;
-            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
-            overflow: hidden;
         }
         .nav-bar {
             background: #0f172a;
@@ -48,19 +44,24 @@
             background: #1e293b;
             color: white;
         }
+        .resume {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
         .header {
             background: #0f172a;
             color: white;
-            padding: 2rem 2rem 1.5rem 2rem;
+            padding: 2rem;
         }
         .header h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
             margin-bottom: 0.3rem;
         }
         .header .title {
-            font-size: 1.2rem;
-            font-weight: 500;
+            font-size: 1.1rem;
             color: #94a3b8;
             margin-bottom: 1rem;
         }
@@ -75,7 +76,7 @@
         .body {
             padding: 2rem;
         }
-        .two-columns {
+        .grid-2 {
             display: flex;
             gap: 2rem;
             flex-wrap: wrap;
@@ -157,7 +158,10 @@
             margin-right: 0.6rem;
             display: inline-block;
         }
-        .project-links a:hover {
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
             background: #e2e8f0;
         }
         .lang-level {
@@ -214,12 +218,12 @@
         </div>
 
         <div class="body">
-            <div class="two-columns">
+            <div class="grid-2">
                 <div class="left">
                     <div class="section">
                         <h2>Контакты</h2>
                         <div class="contact-info">
-                            <p>📧 <a href="mailto:snowleopardstb@gmail.com" style="color:#2563eb; text-decoration:none;">snowleopardstb@gmail.com</a></p>
+                            <p>📧 <a href="mailto:snowleopardstb@gmail.com" style="color:#2563eb;">snowleopardstb@gmail.com</a></p>
                             <p>💻 GitHub: <a href="https://github.com/siarheitsypko-stacked" target="_blank" style="color:#2563eb;">siarheitsypko-stacked</a></p>
                             <p>📱 Telegram: @Luter (по запросу)</p>
                             <p>🔗 <a href="https://siarheitsypko-stacked.github.io/stacked-plan/profile.html" target="_blank" style="color:#2563eb;">Профиль разработчика</a></p>
@@ -227,17 +231,15 @@
                     </div>
 
                     <div class="section">
-                        <h2>Технический стек</h2>
+                        <h2>Навыки</h2>
                         <div>
                             <span class="skill-tag">C# / .NET 8/9</span>
                             <span class="skill-tag">ASP.NET Core Web API</span>
                             <span class="skill-tag">Entity Framework Core</span>
                             <span class="skill-tag">SQL (PostgreSQL, SQLite)</span>
-                            <span class="skill-tag">REST API / Swagger</span>
                             <span class="skill-tag">Clean Architecture / CQRS</span>
-                            <span class="skill-tag">MediatR / FluentValidation</span>
                             <span class="skill-tag">React / TypeScript (основы)</span>
-                            <span class="skill-tag">Git / GitHub Actions (CI/CD)</span>
+                            <span class="skill-tag">Git / GitHub Actions</span>
                             <span class="skill-tag">Docker / docker-compose</span>
                             <span class="skill-tag">Telegram Bot API</span>
                             <span class="skill-tag">Ollama / DeepSeek‑R1 (AI)</span>
@@ -253,8 +255,10 @@
 
                     <div class="section">
                         <h2>Образование</h2>
-                        <div class="project-title">Высшее инженерное образование <span class="badge">диплом</span></div>
-                        <div class="project-desc">Системотехника, структурный анализ, управление сложными проектами. Инженерный подход к разработке ПО: чистая архитектура, тестируемость, масштабируемость.</div>
+                        <div class="project-item">
+                            <div class="project-title">Высшее инженерное образование <span class="badge">диплом</span></div>
+                            <div class="project-desc">Системотехника, структурный анализ, управление сложными проектами. Инженерный подход к разработке ПО: чистая архитектура, тестируемость, масштабируемость.</div>
+                        </div>
                     </div>
                 </div>
 
@@ -274,18 +278,19 @@
                             </div>
                             <div class="project-desc">Консольное приложение для управления постами блога. Полный CRUD, сохранение в JSON, чистая архитектура (интерфейсы, репозиторий). Реализованы валидация, работа с файлами, LINQ, обработка исключений.</div>
                             <div class="project-links">
-                                <a href="https://github.com/siarheitsypko-stacked/stacked-plan/tree/main/BlogConsole" target="_blank">GitHub</a>
+                                <a href="https://github.com/siarheitsypko-stacked/stacked-plan/tree/main/src/BlogConsole" target="_blank">GitHub</a>
                             </div>
                         </div>
 
                         <div class="project-item">
                             <div class="project-title">
-                                ⚙️ Stacked API 
+                                ⚙️ Stacked API (Web API) 
                                 <span class="project-tech">ASP.NET Core · Clean Architecture · CQRS · EF Core · PostgreSQL</span>
                             </div>
-                            <div class="project-desc">Веб-API для блог-платформы. Clean Architecture, CQRS (MediatR), FluentValidation, Entity Framework Core. В планах — интеграция с GitHub API, JWT, клиент на React + TypeScript.</div>
+                            <div class="project-desc">Веб-API для блог-платформы. Построено на принципах Clean Architecture (слои Domain, Application, Infrastructure, Web). Используется CQRS (MediatR), FluentValidation, Entity Framework Core. В планах — интеграция с GitHub API, аутентификация JWT, клиент на React + TypeScript.</div>
                             <div class="project-links">
                                 <a href="https://github.com/siarheitsypko-stacked/stacked-plan" target="_blank">Репозиторий (план)</a>
+                                <a href="https://siarheitsypko-stacked.github.io/stacked-plan/profile.html" target="_blank">Профиль проекта</a>
                             </div>
                         </div>
 
@@ -294,7 +299,7 @@
                                 🤖 Telegram‑бот (AI assistant) 
                                 <span class="project-tech">C# · Telegram.Bot · AI (Semantic Kernel) · Ollama · DeepSeek‑R1</span>
                             </div>
-                            <div class="project-desc">Ассистент для работы с блогом через Telegram: создание/просмотр постов, интеграция с локальной AI‑моделью. Демонстрирует навыки интеграции с внешними API, асинхронную обработку, гибридные AI‑сценарии.</div>
+                            <div class="project-desc">Ассистент для работы с блогом через Telegram: создание/просмотр постов, интеграция с локальной AI‑моделью (DeepSeek‑R1). Демонстрирует навыки интеграции с внешними API, асинхронную обработку, гибридные AI‑сценарии.</div>
                             <div class="project-links">
                                 <span style="font-size:0.7rem; background:#eef2ff; padding:0.2rem 0.6rem; border-radius:16px;">в активной разработке</span>
                             </div>
@@ -316,7 +321,7 @@
 
                     <div class="section">
                         <h2>Карьерные ожидания</h2>
-                        <p>Готов рассматривать <strong>удалённую работу (фриланс)</strong>, <strong>аутстафф-проекты</strong> и официальное трудоустройство (стажировка / junior) с возможностью релокации. Интересны задачи на C# / .NET, разработка API, интеграции, а также участие в opensource. Открыт для предложений, быстро обучаюсь, имею чёткий план развития и наставника.</p>
+                        <p>Готов рассматривать <strong>удалённую работу (фриланс)</strong>, <strong>аутстафф-проекты</strong> и официальное трудоустройство (стажировка / junior) с возможностью релокации. Интересны задачи на C# / .NET, разработка API, интеграции, а также участие в opensource. Открыт для предложений, быстро обучаюсь, имею чёткий план развития и наставника (DeepSeek AI).</p>
                     </div>
                 </div>
             </div>

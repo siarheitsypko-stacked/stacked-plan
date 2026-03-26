@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Mind Map | Схема языка</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background: linear-gradient(145deg, #eef5ff 0%, #d9e8ff 100%);
+            padding: 2rem 1rem;
+            color: #102a4c;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .nav-bar {
+            background: #0f172a;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.1);
+        }
+        .nav-bar a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+        .nav-bar a:hover { background: #1e293b; color: white; }
+        h1 {
+            text-align: center;
+            font-size: 2.2rem;
+            background: linear-gradient(135deg, #0b3b5f, #007acc);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .sub { text-align: center; color: #1e4a76; margin-bottom: 2rem; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.8rem;
+        }
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.4rem;
+            box-shadow: 0 10px 20px rgba(0,30,60,0.08);
+            border: 1px solid rgba(0,122,204,0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #007acc;
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+        }
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            border-left: 5px solid #007acc;
+            padding-left: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .desc {
+            font-size: 0.9rem;
+            color: #2c3e66;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        pre {
+            background: #0b1c2c;
+            border-radius: 1rem;
+            padding: 0.9rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            border: 1px solid #1e4b6e;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: #cfecff;
+        }
+        code {
+            font-family: monospace;
+            background: #f1f5f9;
+            padding: 0.2rem 0.3rem;
+            border-radius: 0.3rem;
+            color: #007acc;
+            font-size: 0.85rem;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            border-top: 1px solid #007acc40;
+            color: #15507b;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 720px) {
+            body { padding: 1rem; }
+            .grid { grid-template-columns: 1fr; gap: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <a href="index.html">🏠 Главная</a>
+        <a href="csharp.html">🔷 C#</a>
+        <a href="css.html">🎨 CSS</a>
+        <a href="javascript.html">📘 JS</a>
+        <a href="typescript.html">📐 TS</a>
+        <a href="xml.html">🗺️ XML</a>
+    </div>
+    <h1>🎨 CSS Mind Map</h1>
+    <div class="sub">каскадные таблицы стилей — гибкость, мощь, современный дизайн</div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-title"><span>📘</span> Основы CSS</div>
+            <div class="desc">Синтаксис, подключение, каскадность, единицы измерения (px, rem, em, vw, vh).</div>
+            <pre><code>/* селектор + правило */
+h1 {
+  color: #007acc;
+  font-size: 2rem;
+}
+.container {
+  width: 80vw;
+  padding: 1.5rem;
+}</code></pre>
+        </div>
+        <div class="card">
+            <div class="card-title"><span>🔍</span> Селекторы</div>
+            <div class="desc">Базовые, комбинаторы, псевдоклассы / псевдоэлементы.</div>
+            <pre><code>.card .title { }      /* потомок */
+section > p { }        /* прямой потомок */
+a:hover { opacity: 0.8; }
+li:nth-child(odd) { }
+p::before { content: "✨"; }</code></pre>
+        </div>
+        <div class="card">
+            <div class="card-title"><span>🎨</span> Цвета и фон</div>
+            <div class="desc">RGB, HEX, HSL, градиенты, фоновые изображения.</div>
+            <pre><code>color: #1e3a8a;
+background: rgba(0,122,204,0.2);
+background: linear-gradient(135deg, #007acc, #1e3a8a);
+background: url('bg.png') center/cover no-repeat;</code></pre>
+        </div>
+        <div class="card">
+            <div class="card-title"><span>✍️</span> Текст & шрифты</div>
+            <div class="desc">Шрифты, выравнивание, трансформация, веб-шрифты.</div>
+            <pre><code>body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: capitalize;
+}</code></pre>
+        </div>
+        <div class="card">
+            <div class="card-title"><span>📦</span> Box Model</div>
+            <div class="desc">content, padding, border, margin, box-sizing.</div>
+            <pre><code>.box {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #007acc;
+  margin: 15px;
+  box-sizing: border-box; /* ширина включает padding+border */
+}</code></pre>
+        </div>
+        <div class="card">
+            <div class="card-title"><span>📍</span> Позиционирование</div>
+            <div class="desc">static, relative, absolute, fixed, sticky, z-index.</div>
+            <pre><code>.parent { position: relative; }
+.child {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+.header { position: sticky; top: 0; }</code></pre>
+        </div>
+        <div class="card">
+            <div class="card-title"><span>🧩</span> Flexbox</div>
+            <div class="desc">Гибкая раскладка, выравнивание, управление осями.</div>
+            <pre><code>.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.item { flex: 1 1 200px; order: 2; }</code></pre>
+        </div>
+        <div class="card">
+            <div class="card-title"><span>🔲</span> Grid Layout</div>
+            <div class="desc">Двумерная сетка, fr, grid-template-areas.</div>
+            <pre><code>.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main";
+}
+.item { grid-column: span 2; }</code></pre>
+        </div>
+        <div class="card">
+            <div class="card-title"><span>📱</span> Адаптивность</div>
+            <div class="desc">Медиа-запросы, Mobile First, viewport.</div>
+            <pre><code>/* mobile-first */
+.container { padding: 1rem; }
+@media (min-width: 768px) {
+  .container { max-width: 720px; margin: auto; }
+}
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: repeat(4, 1fr); }
+}</code></pre>
+        </div>
+        <div class="card">
+            <div class="card-title"><span>✨</span> Анимации & переходы</div>
+            <div class="desc">transition, keyframes, transform.</div>
+            <pre><code>.btn {
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+  background: #007acc;
+}
+@keyframes slide {
+  from { opacity: 0; transform: translateX(-20px);}
+  to { opacity: 1; transform: translateX(0);}
+}
+.fade-in { animation: slide 0.5s forwards; }</code></pre>
+        </div>
+        <div class="card">
+            <div class="card-title"><span>🎛️</span> CSS переменные</div>
+            <div class="desc">Custom Properties, наследование, динамические темы.</div>
+            <pre><code>:root {
+  --primary: #007acc;
+  --spacing: 1rem;
+}
+.card {
+  background: var(--primary, #0a58ca);
+  padding: var(--spacing);
+}
+.dark { --primary: #1e2a3a; }</code></pre>
+        </div>
+        <div class="card">
+            <div class="card-title"><span>🚀</span> Современный CSS</div>
+            <div class="desc">clamp(), :has(), container queries, subgrid.</div>
+            <pre><code>/* адаптивный размер */
+h1 { font-size: clamp(1.5rem, 5vw, 3rem); }
+/* родительский селектор */
+article:has(img) { padding: 1rem; }
+/* контейнерные запросы */
+@container (min-width: 400px) {
+  .card { grid-template-columns: 1fr 1fr; }
+}</code></pre>
+        </div>
+        <div class="card">
+            <div class="card-title"><span>🛠️</span> Экосистема</div>
+            <div class="desc">Препроцессоры, PostCSS, CSS-in-JS, фреймворки.</div>
+            <pre><code>/* Sass (SCSS) */
+$primary: #007acc;
+.button { background: $primary; }
+
+/* Tailwind Utility */
+&lt;div class="bg-blue-600 p-4 rounded"&gt;
+
+/* Styled Components */
+const Button = styled.div`
+  background: #007acc;
+`;</code></pre>
+        </div>
+    </div>
+
+    <div class="footer">
+        🧠 <strong>CSS Mind Map</strong> — от основ до современных фич: флексбоксы, гриды, адаптивность, анимации и переменные.<br>
+        🌟 Каждая карточка — ключевой концепт для создания гибких, красивых и производительных интерфейсов.
+    </div>
+</div>
+</body>
+</html>

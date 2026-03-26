@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TypeScript Mind Map | Схема языка</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
             background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
@@ -17,10 +14,7 @@
             padding: 2rem 1rem;
             line-height: 1.5;
         }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+        .container { max-width: 1400px; margin: 0 auto; }
         .nav-bar {
             background: #0f172a;
             padding: 0.8rem 1.5rem;
@@ -40,10 +34,7 @@
             border-radius: 30px;
             transition: 0.2s;
         }
-        .nav-bar a:hover {
-            background: #1e293b;
-            color: white;
-        }
+        .nav-bar a:hover { background: #1e293b; color: white; }
         h1 {
             text-align: center;
             font-size: 2.2rem;
@@ -53,11 +44,20 @@
             color: transparent;
             margin-bottom: 0.5rem;
         }
-        .sub {
-            text-align: center;
-            color: #4a627a;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
+        .sub { text-align: center; color: #4a627a; margin-bottom: 1rem; font-size: 1.1rem; }
+        .mermaid-container {
+            background: white;
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            margin: 1.5rem 0 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            background: #fafcff;
+            border-radius: 0.8rem;
         }
         .grid {
             display: grid;
@@ -87,17 +87,9 @@
             align-items: center;
             gap: 0.5rem;
         }
-        .card-header span {
-            font-size: 1.5rem;
-        }
-        .card-content {
-            padding: 1rem 1.2rem 1.2rem;
-        }
-        .card-content p {
-            margin-bottom: 0.5rem;
-            color: #2c3e4e;
-            font-size: 0.9rem;
-        }
+        .card-header span { font-size: 1.5rem; }
+        .card-content { padding: 1rem 1.2rem 1.2rem; }
+        .card-content p { margin-bottom: 0.5rem; color: #2c3e4e; font-size: 0.9rem; }
         pre {
             background: #1e2a36;
             color: #e2e8f0;
@@ -139,16 +131,9 @@
             font-size: 0.85rem;
         }
         @media (max-width: 720px) {
-            .grid {
-                grid-template-columns: 1fr;
-                gap: 1.2rem;
-            }
-            body {
-                padding: 1rem;
-            }
-            h1 {
-                font-size: 1.8rem;
-            }
+            .grid { grid-template-columns: 1fr; gap: 1.2rem; }
+            body { padding: 1rem; }
+            h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -164,6 +149,60 @@
     </div>
     <h1>📐 TypeScript Mind Map</h1>
     <div class="sub">Статическая типизация, интерфейсы, дженерики, утилитарные типы и мощные инструменты</div>
+
+    <!-- Mermaid диаграмма взаимосвязей TypeScript -->
+    <div class="mermaid-container">
+        <div class="mermaid">
+            graph TD
+                TS["TypeScript"] --> Compiler["Компилятор (tsc)"]
+                Compiler --> Config["tsconfig.json"]
+                Compiler --> JS["Генерация JavaScript"]
+                
+                Types["Система типов"] --> Primitives["Примитивы: string, number, boolean, ..."]
+                Types --> Arrays["Массивы / Кортежи"]
+                Types --> Union["Union & Intersection"]
+                Types --> Literal["Literal Types"]
+                Types --> Advanced["Продвинутые: conditional, mapped, template literal"]
+                
+                Interfaces["Интерфейсы"] --> Extends["Расширение (extends)"]
+                Interfaces --> Implements["Реализация классами"]
+                Interfaces --> Hybrid["Гибридные типы"]
+                
+                Classes["Классы"] --> Modifiers["Модификаторы: public, private, protected, readonly"]
+                Classes --> Abstract["Абстрактные классы"]
+                Classes --> Implements["Implements интерфейсов"]
+                
+                Generics["Дженерики"] --> Functions["Generic функции"]
+                Generics --> Classes["Generic классы"]
+                Generics --> Constraints["Ограничения (extends)"]
+                
+                Utilities["Утилитарные типы"] --> Partial["Partial<T>"]
+                Utilities --> Pick["Pick<T, K>"]
+                Utilities --> Omit["Omit<T, K>"]
+                Utilities --> Record["Record<K, T>"]
+                Utilities --> ReturnType["ReturnType<T>"]
+                
+                Modules["Модули"] --> ESModules["ES Modules"]
+                Modules --> Namespaces["Пространства имён"]
+                
+                Decorators["Декораторы"] --> ClassDecorators["Class"]
+                Decorators --> MethodDecorators["Method"]
+                Decorators --> PropertyDecorators["Property"]
+                
+                TS --> Types
+                TS --> Interfaces
+                TS --> Classes
+                TS --> Generics
+                TS --> Utilities
+                TS --> Modules
+                TS --> Decorators
+                
+                Types --> Advanced
+                Generics --> Constraints
+                Classes --> Implements
+                Interfaces --> Implements
+        </div>
+    </div>
 
     <div class="grid">
         <div class="card">
@@ -181,7 +220,6 @@ let nothing: void = undefined;</code></pre>
                 <div class="badge-list"><span class="badge">типы</span><span class="badge">кортежи</span><span class="badge">enum</span><span class="badge">unknown</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>⚙️</span> Продвинутые типы</div>
             <div class="card-content">
@@ -203,7 +241,6 @@ type ReadonlyPoint = { readonly [P in keyof Point]: Point[P] };</code></pre>
                 <div class="badge-list"><span class="badge">union/intersection</span><span class="badge">type guards</span><span class="badge">mapped types</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>📄</span> Интерфейсы и типы</div>
             <div class="card-content">
@@ -224,7 +261,6 @@ interface Admin extends User {
                 <div class="badge-list"><span class="badge">interface</span><span class="badge">type alias</span><span class="badge">extends</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>🏛️</span> Классы и ООП</div>
             <div class="card-content">
@@ -247,7 +283,6 @@ class ConsoleLogger implements ILogger {
                 <div class="badge-list"><span class="badge">модификаторы</span><span class="badge">абстрактные классы</span><span class="badge">implements</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>🧬</span> Дженерики (Generics)</div>
             <div class="card-content">
@@ -270,7 +305,6 @@ function logLength&lt;T extends { length: number }&gt;(item: T): T {
                 <div class="badge-list"><span class="badge">type parameters</span><span class="badge">constraints</span><span class="badge">generic classes</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>🛠️</span> Утилитарные типы</div>
             <div class="card-content">
@@ -291,7 +325,6 @@ type Return = ReturnType<typeof getValue>; // number</code></pre>
                 <div class="badge-list"><span class="badge">utility types</span><span class="badge">Pick/Omit</span><span class="badge">Record</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>📦</span> Модули и конфигурация</div>
             <div class="card-content">
@@ -317,7 +350,6 @@ console.log(add(5, 3));
                 <div class="badge-list"><span class="badge">tsconfig</span><span class="badge">strict mode</span><span class="badge">ES modules</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>🌐</span> Работа с DOM</div>
             <div class="card-content">
@@ -332,7 +364,6 @@ button.addEventListener("click", (e: MouseEvent) => {
                 <div class="badge-list"><span class="badge">type assertion</span><span class="badge">DOM types</span><span class="badge">events</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>🚀</span> Продвинутые приёмы</div>
             <div class="card-content">
@@ -350,7 +381,6 @@ function fancyThis(this: { name: string }) {
                 <div class="badge-list"><span class="badge">conditional types</span><span class="badge">template literal</span><span class="badge">decorators</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>🔧</span> Инструменты и экосистема</div>
             <div class="card-content">
@@ -377,5 +407,8 @@ npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugi
         🧩 <strong>Ключевая идея:</strong> статическая типизация на этапе разработки → меньше ошибок в runtime.
     </div>
 </div>
+<script>
+    mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: { background: '#ffffff', primaryColor: '#007acc', primaryBorderColor: '#2b6f9e' } });
+</script>
 </body>
 </html>

@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Схемы языков программирования</title>
+    <title>Схемы языков программирования | Mind‑maps</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
             background: #f8fafc;
@@ -13,7 +18,13 @@
             line-height: 1.5;
             padding: 2rem 1rem;
         }
-        .container { max-width: 1200px; margin: 0 auto; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* навигационная панель – единый стиль с остальными страницами */
         .top-bar {
             background: #0f172a;
             padding: 0.8rem 1.5rem;
@@ -25,6 +36,7 @@
             margin-bottom: 2rem;
             box-shadow: 0 4px 6px -2px rgba(0,0,0,0.1);
         }
+
         .top-bar a {
             color: #e2e8f0;
             text-decoration: none;
@@ -33,10 +45,12 @@
             border-radius: 30px;
             transition: 0.2s;
         }
+
         .top-bar a:hover {
             background: #1e293b;
             color: white;
         }
+
         h1 {
             text-align: center;
             font-size: 2.2rem;
@@ -46,16 +60,19 @@
             color: transparent;
             margin-bottom: 0.5rem;
         }
+
         .sub {
             text-align: center;
             color: #475569;
             margin-bottom: 2rem;
         }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 1.5rem;
         }
+
         .card {
             background: white;
             border-radius: 1rem;
@@ -67,11 +84,13 @@
             display: block;
             border: 1px solid #e2e8f0;
         }
+
         .card:hover {
             transform: translateY(-4px);
             box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
             border-color: #cbd5e1;
         }
+
         .card h2 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
@@ -79,10 +98,23 @@
             align-items: center;
             gap: 0.5rem;
         }
+
         .card p {
             color: #334155;
             font-size: 0.9rem;
+            margin-bottom: 0.5rem;
         }
+
+        .card-badge {
+            display: inline-block;
+            margin-top: 0.75rem;
+            font-size: 0.75rem;
+            background: #eef2ff;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            color: #1e40af;
+        }
+
         .footer {
             text-align: center;
             margin-top: 3rem;
@@ -91,12 +123,28 @@
             color: #64748b;
             font-size: 0.85rem;
         }
+
         .footer a {
             color: #3b82f6;
             text-decoration: none;
         }
+
         .footer a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+            .top-bar {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -112,33 +160,38 @@
     </div>
 
     <h1>🧠 Схемы языков программирования</h1>
-    <div class="sub">Mind‑map ключевых концепций с примерами кода</div>
+    <div class="sub">Mind‑map ключевых концепций с примерами кода и диаграммами взаимосвязей</div>
 
     <div class="grid">
         <a href="csharp.html" class="card">
             <h2><span>🔷</span> C#</h2>
             <p>Основы, ООП, Generics, LINQ, асинхронность, современные возможности .NET.</p>
+            <span class="card-badge">диаграмма CLR и экосистемы</span>
         </a>
         <a href="css.html" class="card">
             <h2><span>🎨</span> CSS</h2>
             <p>Селекторы, Flexbox, Grid, адаптивность, анимации, переменные, современные фичи.</p>
+            <span class="card-badge">схема каскадности и макетов</span>
         </a>
         <a href="javascript.html" class="card">
             <h2><span>📘</span> JavaScript</h2>
             <p>ES6+, типы данных, функции, асинхронность, модули, DOM, современные стандарты.</p>
+            <span class="card-badge">взаимодействие движка, event loop, прототипы</span>
         </a>
         <a href="typescript.html" class="card">
             <h2><span>📐</span> TypeScript</h2>
             <p>Статическая типизация, интерфейсы, дженерики, утилитарные типы, конфигурация.</p>
+            <span class="card-badge">система типов и компилятор</span>
         </a>
         <a href="xml.html" class="card">
             <h2><span>🗺️</span> XML</h2>
             <p>Синтаксис, DTD, XSD, XPath, XSLT, пространства имён, инструменты обработки.</p>
+            <span class="card-badge">технологический стек XML</span>
         </a>
     </div>
 
     <div class="footer">
-        📌 Все схемы содержат компактное описание ключевых тем с примерами кода.<br>
+        📌 Все схемы содержат компактное описание ключевых тем с примерами кода и интерактивные диаграммы взаимосвязей.<br>
         🔗 <a href="../../index.html">Вернуться на главную страницу проекта Stacked</a>
     </div>
 </div>

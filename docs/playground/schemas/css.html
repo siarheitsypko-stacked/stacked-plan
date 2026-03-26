@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Mind Map | Схема языка</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -42,7 +43,21 @@
             color: transparent;
             margin-bottom: 0.5rem;
         }
-        .sub { text-align: center; color: #1e4a76; margin-bottom: 2rem; }
+        .sub { text-align: center; color: #1e4a76; margin-bottom: 1rem; }
+        .mermaid-container {
+            background: white;
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            margin: 1.5rem 0 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            background: #fafcff;
+            border-radius: 0.8rem;
+        }
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -122,6 +137,58 @@
     </div>
     <h1>🎨 CSS Mind Map</h1>
     <div class="sub">каскадные таблицы стилей — гибкость, мощь, современный дизайн</div>
+
+    <!-- Mermaid диаграмма взаимосвязей CSS -->
+    <div class="mermaid-container">
+        <div class="mermaid">
+            graph TD
+                CSS["CSS (Cascading Style Sheets)"] --> Syntax["Синтаксис: селектор { свойства }"]
+                CSS --> Cascade["Каскадность, специфичность, наследование"]
+                
+                Selectors["Селекторы"] --> Basic["Типы: элемент, класс, id, атрибут"]
+                Selectors --> Combinators["Комбинаторы: >, +, ~, пробел"]
+                Selectors --> Pseudo["Псевдоклассы/элементы: :hover, ::before"]
+                
+                Properties["Свойства"] --> BoxModel["Box Model: margin, border, padding, content"]
+                Properties --> Positioning["Позиционирование: static, relative, absolute, fixed, sticky"]
+                Properties --> Colors["Цвета/фон: gradient, rgba, изображения"]
+                Properties --> Typography["Текст/шрифты: font, text-align, @font-face"]
+                
+                Layout["Макеты"] --> Flexbox["Flexbox (одномерный)"]
+                Layout --> Grid["Grid (двумерный)"]
+                Layout --> MultiCol["Многоколоночная верстка"]
+                
+                Responsive["Адаптивность"] --> Media["Медиа-запросы (@media)"]
+                Responsive --> Units["Относительные единицы: rem, em, vw, vh, %"]
+                Responsive --> Container["Контейнерные запросы (@container)"]
+                
+                Effects["Эффекты"] --> Transitions["Переходы (transition)"]
+                Effects --> Animations["Анимации (@keyframes)"]
+                Effects --> Transform["Трансформации (transform)"]
+                
+                Modern["Современный CSS"] --> Variables["CSS переменные (custom properties)"]
+                Modern --> Has[":has() родительский селектор"]
+                Modern --> Nesting["Вложенность (nesting)"]
+                Modern --> Layers["Каскадные слои (@layer)"]
+                
+                Tooling["Инструменты"] --> Preprocessors["Препроцессоры: Sass, Less"]
+                Tooling --> PostCSS["PostCSS, Autoprefixer"]
+                Tooling --> Frameworks["Фреймворки: Tailwind, Bootstrap"]
+                
+                CSS --> Selectors
+                CSS --> Properties
+                CSS --> Layout
+                CSS --> Responsive
+                CSS --> Effects
+                CSS --> Modern
+                CSS --> Tooling
+                
+                Properties --> Layout
+                Properties --> Effects
+                Layout --> Responsive
+                Modern --> Variables
+        </div>
+    </div>
 
     <div class="grid">
         <div class="card">
@@ -289,5 +356,8 @@ const Button = styled.div`
         🌟 Каждая карточка — ключевой концепт для создания гибких, красивых и производительных интерфейсов.
     </div>
 </div>
+<script>
+    mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: { background: '#ffffff', primaryColor: '#007acc', primaryBorderColor: '#0b3b5f' } });
+</script>
 </body>
 </html>

@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Mind Map | Схема языка</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
             background: #fef9e6;
@@ -17,10 +14,7 @@
             color: #2c3e2f;
             line-height: 1.5;
         }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+        .container { max-width: 1400px; margin: 0 auto; }
         .nav-bar {
             background: #0f172a;
             padding: 0.8rem 1.5rem;
@@ -40,10 +34,7 @@
             border-radius: 30px;
             transition: 0.2s;
         }
-        .nav-bar a:hover {
-            background: #1e293b;
-            color: white;
-        }
+        .nav-bar a:hover { background: #1e293b; color: white; }
         h1 {
             text-align: center;
             font-size: 2.2rem;
@@ -53,10 +44,20 @@
             color: transparent;
             margin-bottom: 0.5rem;
         }
-        .sub {
-            text-align: center;
-            color: #5a626e;
-            margin-bottom: 2rem;
+        .sub { text-align: center; color: #5a626e; margin-bottom: 1rem; }
+        .mermaid-container {
+            background: white;
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            margin: 1.5rem 0 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #ffe0b5;
+        }
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            background: #fef9e6;
+            border-radius: 0.8rem;
         }
         .grid {
             display: grid;
@@ -86,18 +87,9 @@
             align-items: center;
             gap: 0.5rem;
         }
-        .card-header span {
-            font-size: 1.5rem;
-        }
-        .card-content {
-            padding: 1rem 1.2rem 1.2rem;
-        }
-        .card-content p {
-            margin-bottom: 0.5rem;
-            color: #2c3e2f;
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
+        .card-header span { font-size: 1.5rem; }
+        .card-content { padding: 1rem 1.2rem 1.2rem; }
+        .card-content p { margin-bottom: 0.5rem; color: #2c3e2f; font-size: 0.9rem; line-height: 1.4; }
         pre {
             background: #1e2a2a;
             color: #e2e8f0;
@@ -139,16 +131,9 @@
             font-size: 0.85rem;
         }
         @media (max-width: 720px) {
-            .grid {
-                grid-template-columns: 1fr;
-                gap: 1.2rem;
-            }
-            body {
-                padding: 1rem;
-            }
-            h1 {
-                font-size: 1.8rem;
-            }
+            .grid { grid-template-columns: 1fr; gap: 1.2rem; }
+            body { padding: 1rem; }
+            h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -164,6 +149,58 @@
     </div>
     <h1>📘 JavaScript Mind Map</h1>
     <div class="sub">Ключевые разделы языка ES6+ с примерами кода</div>
+
+    <!-- Mermaid диаграмма взаимосвязей JavaScript -->
+    <div class="mermaid-container">
+        <div class="mermaid">
+            graph TD
+                Engine["JS Engine (V8, SpiderMonkey)"] --> Memory["Heap / Call Stack"]
+                Engine --> EventLoop["Event Loop & Task Queue"]
+                
+                Types["Типы данных"] --> Primitives["Примитивы: string, number, boolean, null, undefined, symbol, bigint"]
+                Types --> Objects["Объекты: Object, Array, Function, Date, RegExp"]
+                
+                Scope["Области видимости"] --> Global["Глобальная"]
+                Scope --> Function["Функциональная (var)"]
+                Scope --> Block["Блочная (let, const)"]
+                Scope --> Closure["Замыкания"]
+                
+                Functions["Функции"] --> Declarations["Function Declaration"]
+                Functions --> Expressions["Function Expression"]
+                Functions --> Arrow["Стрелочные функции"]
+                Functions --> HigherOrder["Функции высшего порядка"]
+                
+                OOP["Объектная модель"] --> Prototypes["Прототипное наследование"]
+                OOP --> Classes["Классы (ES6+)"]
+                OOP --> This["Контекст this"]
+                
+                Async["Асинхронность"] --> Callbacks["Колбэки"]
+                Async --> Promises["Promises"]
+                Async --> AsyncAwait["async/await"]
+                Async --> EventLoop["Event Loop"]
+                
+                Modules["Модули"] --> ESModules["ES Modules (import/export)"]
+                Modules --> CommonJS["CommonJS (Node.js)"]
+                
+                DOM["DOM API"] --> Manipulation["Манипуляция элементами"]
+                DOM --> Events["События"]
+                DOM --> BOM["BOM (window, navigator)"]
+                
+                Engine --> Types
+                Engine --> Scope
+                Engine --> Functions
+                Engine --> OOP
+                Engine --> Async
+                Engine --> Modules
+                Engine --> DOM
+                
+                Async --> Promises
+                Promises --> AsyncAwait
+                Scope --> Closure
+                Functions --> HigherOrder
+                HigherOrder --> Callbacks
+        </div>
+    </div>
 
     <div class="grid">
         <div class="card">
@@ -182,7 +219,6 @@ console.log(typeof big); // "bigint"</code></pre>
                 <div class="badge-list"><span class="badge">динамическая типизация</span><span class="badge">7 примитивов</span><span class="badge">typeof</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>📦</span> Переменные и область видимости</div>
             <div class="card-content">
@@ -202,7 +238,6 @@ var hoistedVar = "hoist";</code></pre>
                 <div class="badge-list"><span class="badge">hoisting</span><span class="badge">block scope</span><span class="badge">TDZ</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>⚙️</span> Функции & замыкания</div>
             <div class="card-content">
@@ -231,7 +266,6 @@ console.log(inc()); // 1</code></pre>
                 <div class="badge-list"><span class="badge">замыкания</span><span class="badge">стрелочные функции</span><span class="badge">rest parameters</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>🧬</span> Объекты и прототипы</div>
             <div class="card-content">
@@ -255,7 +289,6 @@ show.call(user); // Alice</code></pre>
                 <div class="badge-list"><span class="badge">прототипное наследование</span><span class="badge">class</span><span class="badge">this/call/bind</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>📊</span> Массивы и деструктуризация</div>
             <div class="card-content">
@@ -272,7 +305,6 @@ const [head, ...tail] = nums; // head=1, tail=[2,3,4,5]</code></pre>
                 <div class="badge-list"><span class="badge">map/filter/reduce</span><span class="badge">деструктуризация</span><span class="badge">spread/rest</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>⏳</span> Асинхронность</div>
             <div class="card-content">
@@ -300,7 +332,6 @@ Promise.all([p1, p2, p3]).then(values => console.log(values));</code></pre>
                 <div class="badge-list"><span class="badge">Promise</span><span class="badge">async/await</span><span class="badge">Event Loop</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>📦</span> Модули (ES6)</div>
             <div class="card-content">
@@ -320,7 +351,6 @@ const module = await import('./math.js');</code></pre>
                 <div class="badge-list"><span class="badge">ES modules</span><span class="badge">import/export</span><span class="badge">динамический импорт</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>⚠️</span> Обработка ошибок</div>
             <div class="card-content">
@@ -347,7 +377,6 @@ throw new ApiError(404, "Ресурс не найден");</code></pre>
                 <div class="badge-list"><span class="badge">try/catch</span><span class="badge">пользовательские ошибки</span><span class="badge">finally</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>✨</span> ES2020+ новинки</div>
             <div class="card-content">
@@ -368,7 +397,6 @@ const grouped = Object.groupBy([{age:20},{age:20},{age:30}], p => p.age);</code>
                 <div class="badge-list"><span class="badge">optional chaining</span><span class="badge">nullish coalescing</span><span class="badge">Promise.allSettled</span></div>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header"><span>🛠️</span> Инструменты & экосистема</div>
             <div class="card-content">
@@ -393,5 +421,8 @@ localStorage.setItem("token", "abc123");</code></pre>
         Практикуйтесь, модифицируйте код и стройте мощные веб‑приложения. 🚀
     </div>
 </div>
+<script>
+    mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: { background: '#ffffff', primaryColor: '#f7b32b', primaryBorderColor: '#f4a261' } });
+</script>
 </body>
 </html>

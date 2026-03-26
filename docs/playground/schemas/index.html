@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Схемы языков программирования</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
             background: #f8fafc;
@@ -17,18 +13,38 @@
             line-height: 1.5;
             padding: 2rem 1rem;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+        .container { max-width: 1200px; margin: 0 auto; }
+        .top-bar {
+            background: #0f172a;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.1);
+        }
+        .top-bar a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+        .top-bar a:hover {
+            background: #1e293b;
+            color: white;
         }
         h1 {
             text-align: center;
             font-size: 2.2rem;
-            margin-bottom: 0.5rem;
             background: linear-gradient(135deg, #2563eb, #7c3aed);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
+            margin-bottom: 0.5rem;
         }
         .sub {
             text-align: center;
@@ -75,10 +91,26 @@
             color: #64748b;
             font-size: 0.85rem;
         }
+        .footer a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 <div class="container">
+    <div class="top-bar">
+        <a href="../../index.html">🏠 Главная проекта</a>
+        <a href="csharp.html">🔷 C#</a>
+        <a href="css.html">🎨 CSS</a>
+        <a href="javascript.html">📘 JS</a>
+        <a href="typescript.html">📐 TS</a>
+        <a href="xml.html">🗺️ XML</a>
+    </div>
+
     <h1>🧠 Схемы языков программирования</h1>
     <div class="sub">Mind‑map ключевых концепций с примерами кода</div>
 
@@ -107,7 +139,7 @@
 
     <div class="footer">
         📌 Все схемы содержат компактное описание ключевых тем с примерами кода.<br>
-        Используйте для быстрого повторения и систематизации знаний.
+        🔗 <a href="../../index.html">Вернуться на главную страницу проекта Stacked</a>
     </div>
 </div>
 </body>
